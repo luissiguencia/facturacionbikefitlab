@@ -37,7 +37,7 @@ Reference:
         'data/l10n_latam_identification_type_ec.xml',
         'data/l10n_latam.document.type_ec.xml',
         'data/res_bank_ec.xml',
-        'data/res_partner_ec.xml',
+      #  'data/res_partner_ec.xml',
         'views/res_company_views.xml',
         'views/res_partner_views.xml',
         'views/views.xml',

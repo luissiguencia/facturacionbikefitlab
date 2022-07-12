@@ -30,8 +30,8 @@
     # always loaded
     'data': [
         'security/security.xml',
-        'data/environment.xml',
         'data/sequence.xml',
+        'data/environment.xml',
         'data/evoucher_template.xml',
         'data/l10n_latam_document_type_ec.xml',
         'views/res_company_views.xml',

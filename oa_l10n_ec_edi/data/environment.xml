@@ -1,14 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="oa_evoucher_environment_offline_test" model="oa.evoucher.environment">
         <field name="name">PRUEBAS (Offline)</field>
         <field name="sri_code">1</field>
         <field name="reception_ws">https://celcer.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantes?wsdl</field>
         <field name="authorization_ws">https://celcer.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantes?wsdl</field>
+        <field name="evoucher_general_sequence" ref="oa_l10n_ec_edi.evoucher_general_sequence"></field>
     </record>
     <record id="oa_evoucher_environment_offline_prod" model="oa.evoucher.environment">
         <field name="name">PRODUCCION (Offline)</field>
         <field name="sri_code">2</field>
         <field name="reception_ws">https://cel.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantes?wsdl</field>
         <field name="authorization_ws">https://cel.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantes?wsdl</field>
+        <field name="evoucher_general_sequence" ref="oa_l10n_ec_edi.evoucher_general_sequence"></field>
     </record>
 </odoo>
