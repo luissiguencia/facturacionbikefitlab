@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+   <data noupdate="0">
+      <record model="oa.account.voucher.evoucher.template" id="oa_account_voucher_template_fac_1-1-1">
+         <field name="voucher_id" ref="oalliance_account_sri_data.compdocventas"></field>
+         <field name="version">1.1.1</field>
+         <field name="batch">True</field>
+         <field name="template_xml"><![CDATA[
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<factura xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="comprobante" version="1.0.0">
+  %for o in objects:
+  <infoTributaria>
+    <ambiente>${ambiente.sri_code}</ambiente>
+    <tipoEmision>${tipo_emision}</tipoEmision>
+    <razonSocial>${o.company_id.partner_id.full_name or o.company_id.partner_id.name}</razonSocial>
+    <nombreComercial>${o.company_id.partner_id.name}</nombreComercial>
+    <ruc>${o.company_id.ruc}</ruc>
+    <claveAcceso>${clave_acceso(o,ambiente)}</claveAcceso>
+    <codDoc>${o.voucher_id.evoucher_code}</codDoc>
+    <estab>${o.branch_id.serie}</estab>
+    <ptoEmi>${o.emission_id.serie}</ptoEmi>
+    <secuencial>${o.physical_number}</secuencial>
+    <dirMatriz>${o.company_id.street + ' ' + (o.company_id.street2 or '')}</dirMatriz>
+  </infoTributaria>
+    <infoFactura>
+    <fechaEmision>${o.date_invoice[-2:]  + '/' +o.date_invoice[5:7]  + '/' + o.date_invoice[:4]}</fechaEmision>
+    <dirEstablecimiento>${o.branch_id.address or (o.company_id.street + ' ' + o.company_id.street2 or '')}</dirEstablecimiento>
+    %if o.company_id.company_fiscal_position_sale_id.code == 'cfp_especiales_vta':
+    <contribuyenteEspecial>${o.company_id.cont_especial_code_sri or ''}</contribuyenteEspecial>
+    %endif
+    %if o.company_id.require_account_sri:
+    <obligadoContabilidad>${'SI'}</obligadoContabilidad>
+    %else:
+    <obligadoContabilidad>${'NO'}</obligadoContabilidad>
+    %endif
+    <tipoIdentificacionComprador>${o.type_sri_id.sri_code}</tipoIdentificacionComprador>
+    <razonSocialComprador>${o.partner_id.full_name or o.partner_id.name}</razonSocialComprador>
+    <identificacionComprador>${o.sri_id}</identificacionComprador>
+    <totalSinImpuestos>${"{0:.2f}".format(o.amount_untaxed)}</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    %if o.tax_line:
+    <totalConImpuestos>
+      %for impuesto in o.tax_line:
+      %if impuesto.type_application != 'ret':
+      <totalImpuesto>
+	<codigo>${impuesto.tax_group.evoucher_code}</codigo>
+	%if impuesto.tax_group.evoucher_code == '2':
+	<%!taxed_dict = {'taxed0':0,'taxed':2,'notaxed':6}%><codigoPorcentaje>${taxed_dict[impuesto.taxed_type]}</codigoPorcentaje>
+	%endif
+	%if impuesto.tax_group.evoucher_code == '3':
+	<codigoPorcentaje>${impuesto.tax_id.description}</codigoPorcentaje>							
+	%endif					
+	<baseImponible>${"{0:.2f}".format(impuesto.base)}</baseImponible>
+	<tarifa>${int(impuesto.tax_id.amount *100)}</tarifa>
+	<valor>${"{0:.2f}".format(impuesto.amount)}</valor>		
+      </totalImpuesto>
+      %endif
+      %endfor
+    </totalConImpuestos>
+    %endif
+    <propina>0.00</propina>
+    <importeTotal>${"{0:.2f}".format(o.amount_total)}</importeTotal>
+    %if o.company_id.currency_id.name == 'USD':
+    <moneda>DOLAR</moneda>
+    %else:
+    <moneda>${o.company_id.currency_id.name}</moneda>
+    %endif
+  </infoFactura>
+    <detalles>
+    %for line in o.invoice_line:
+    <detalle>
+      <codigoPrincipal>${line.product_id.ean13 or 'N/A'}</codigoPrincipal>   
+      <descripcion>${line.name}</descripcion>
+      <cantidad>${"{0:.2f}".format(line.quantity)}</cantidad>
+      <precioUnitario>${"{0:.2f}".format(line.price_unit)}</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>${"{0:.2f}".format(line.price_subtotal)}</precioTotalSinImpuesto>
+      %if line.invoice_line_tax_id:
+      <impuestos>
+	%for line_tax_line in line.invoice_line_tax_id:			
+	%if line_tax_line.type_application != 'ret':
+	<impuesto>
+	  <codigo>${line_tax_line.tax_group.evoucher_code}</codigo>
+	  %if line_tax_line.tax_group.evoucher_code == '2':			
+	  <%!taxed_dict = {'taxed0':0,'taxed':2,'notaxed':6}%><codigoPorcentaje>${taxed_dict[line_tax_line.taxed_type]}</codigoPorcentaje>	
+	  %endif
+	  %if line_tax_line.tax_group.evoucher_code == '3':	
+	  <codigoPorcentaje>${impuesto.tax_id.description}</codigoPorcentaje>	
+	  %endif
+	  <tarifa>${int(line_tax_line.amount*100)}</tarifa>
+	  <baseImponible>${"{0:.2f}".format(line.price_subtotal)}</baseImponible>
+	  <valor>${"{0:.2f}".format((line.price_subtotal*line_tax_line.amount))}</valor>		
+	</impuesto>
+	%endif
+	%endfor			
+      </impuestos>
+      %endif
+    </detalle>
+    %endfor
+  </detalles>
+  %if o.comment:
+  <infoAdicional>
+    %if '\n' in o.comment:
+    %for n in range(len(o.comment.split('\n'))):
+    <campoAdicional nombre="campo${n}">${o.comment.split('\n')[n]}</campoAdicional>
+    %endfor
+    %else:
+    <campoAdicional nombre="Comentario">${o.comment}</campoAdicional>
+    %endif
+  </infoAdicional>
+  %endif
+  %endfor
+</factura>]]></field>
+      </record>
+
+      <record model="oa.account.voucher.evoucher.template" id="oa_account_voucher_template_ret_1-1-1">
+         <field name="voucher_id" ref="oalliance_account_sri_data.compretcom"></field>
+         <field name="version">1.1.1</field>
+         <field name="batch">True</field>
+         <field name="template_xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+%for o in objects:
+<comprobanteRetencion id="comprobante" version="1.1.1">
+	<infoTributaria>
+		<ambiente>${ambiente.sri_code}</ambiente>
+		<tipoEmision>${tipo_emision}</razonSocial>
+		<nombreComercial>${o.company_id.partner_id.full_name or o.company_id.partner_id.name}</nombreComercial>
+		<ruc>${o.company_id.ruc}</ruc>
+		<claveAcceso>${clave_acceso(o,ambiente)}</claveAcceso>
+		<codDoc>${o.voucher_id.evoucher_code}</codDoc>
+		<estab>${o.branch_id.serie}</estab>
+		<ptoEmi>${o.emission_id.serie</ptoEmi>
+		<secuencial>${o.physical_number}</secuencial>
+		<dirMatriz>${o.company_id.street + ' ' + (o.company_id.street2 or '')}</dirMatriz>
+	</infoTributaria>
+	<infoCompRetencion>
+		<fechaEmision>${o.date_invoice[-2:]  + '/' +o.date_invoice[5:7]  + '/' + o.date_invoice[:4]</fechaEmision>
+		<dirEstablecimiento>${o.branch_id.address or (o.company_id.street + ' ' + o.company_id.street2 or '')}</dirEstablecimiento>
+		%if o.company_id.company_fiscal_position_sale_id.code == 'cfp_especiales_vta':
+				<contribuyenteEspecial>${o.company_id.cont_especial_code_sri or ''}</contribuyenteEspecial>
+			%endif
+			%if o.company_id.require_account_sri:
+				<obligadoContabilidad>${'SI'}</obligadoContabilidad>
+			%else:
+				<obligadoContabilidad>${'NO'}</obligadoContabilidad>
+		%endif
+		<tipoIdentificacionSujetoRetenido>${o.type_sri_id.sri_code}</tipoIdentificacionSujetoRetenido>
+		<razonSocialSujetoRetenido>${o.partner_id.full_name or o.partner_id.name}</razonSocialSujetoRetenido>
+		<identificacionSujetoRetenido>${o.sri_id}</identificacionSujetoRetenido>
+		<periodoFiscal>${get_fiscal_period}</periodoFiscal>
+	</infoCompRetencion>
+	<impuestos>
+ %for impuesto in o.tax_line:
+		<impuesto>
+			<codigo${impuesto.tax_group.evoucher_code}</codigo>
+			<codigoRetencion>Ax</codigoRetencion>
+			<baseImponible>${"{0:.2f}".format(impuesto.base)}</baseImponible>
+			<porcentajeRetener>${impuesto.tax_id.description}</porcentajeRetener>
+			<valorRetenido>${"{0:.2f}".format(impuesto.amount)}</valorRetenido>
+			<codDocSustento>00</codDocSustento>
+			<numDocSustento>000000000000000</numDocSustento>
+			<fechaEmisionDocSustento>01/01/1000</fechaEmisionDocSustento>
+		</impuesto>		
+	</impuestos>
+	 %if o.comment:
+  <infoAdicional>
+    %if '\n' in o.comment:
+    %for n in range(len(o.comment.split('\n'))):
+    <campoAdicional nombre="campo${n}">${o.comment.split('\n')[n]}</campoAdicional>
+    %endfor
+    %else:
+    <campoAdicional nombre="Comentario">${o.comment}</campoAdicional>
+    %endif
+  </infoAdicional>
+  %endif
+  %endfor
+</comprobanteRetencion>]]>
+         </field>
+      </record>
+
+      <record model="oa.account.voucher.evoucher.template" id="oa_account_voucher_template_NC_1-1-1">
+         <field name="voucher_id" ref="oalliance_account_sri_data.compNCV"></field>
+         <field name="version">1.1.1</field>
+         <field name="batch">True</field>
+         <field name="template_xml"><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+%for o in objects:
+<notaCredito id="comprobante" version="1.1.1">
+	<infoTributaria>
+		<ambiente>${ambiente.sri_code}</ambiente>
+		<tipoEmision>${tipo_emision}</tipoEmision>
+		<razonSocial>${o.company_id.partner_id.full_name or o.company_id.partner_id.name}</razonSocial>
+		<nombreComercial>${o.company_id.partner_id.name}</nombreComercial>
+		<ruc>${o.company_id.ruc}</ruc>
+		<claveAcceso>${clave_acceso(o,ambiente)}</claveAcceso>
+		<codDoc>${o.voucher_id.evoucher_code}</codDoc>
+		<estab>${o.branch_id.serie}</estab>
+		<ptoEmi>${o.emission_id.serie}</ptoEmi>
+		<secuencial>${o.physical_number}</secuencial>
+		<dirMatriz>${o.company_id.street + ' ' + (o.company_id.street2 or '')}</dirMatriz>
+	</infoTributaria>
+	<infoNotaCredito>
+    <fechaEmision>${o.date_invoice[-2:]  + '/' +o.date_invoice[5:7]  + '/' + o.date_invoice[:4]}</fechaEmision>
+    <dirEstablecimiento>${o.branch_id.address or (o.company_id.street + ' ' + o.company_id.street2 or '')}</dirEstablecimiento>
+    %if o.company_id.company_fiscal_position_sale_id.code == 'cfp_especiales_vta':
+    <contribuyenteEspecial>${o.company_id.cont_especial_code_sri or ''}</contribuyenteEspecial>
+    %endif
+    %if o.company_id.require_account_sri:
+    <obligadoContabilidad>${'SI'}</obligadoContabilidad>
+    %else:
+    <obligadoContabilidad>${'NO'}</obligadoContabilidad>
+    %endif
+    <tipoIdentificacionComprador>${o.type_sri_id.sri_code}</tipoIdentificacionComprador>
+    <razonSocialComprador>${o.partner_id.full_name or o.partner_id.name}</razonSocialComprador>
+    <identificacionComprador>${o.sri_id}</identificacionComprador>
+		<codDocModificado>00</codDocModificado>
+		<numDocModificado>000-000-000000000</numDocModificado>
+		<fechaEmisionDocSustento>01/01/1000</fechaEmisionDocSustento>
+		<totalSinImpuestos>${"{0:.2f}".format(o.amount_untaxed)}</totalSinImpuestos>
+		<valorModificacion>0</valorModificacion>
+        %if o.company_id.currency_id.name == 'USD':
+         <moneda>DOLAR</moneda>
+        %else:
+         <moneda>${o.company_id.currency_id.name}</moneda>
+        %endif
+		%if o.tax_line:
+          <totalConImpuestos>
+            %for impuesto in o.tax_line:
+            %if impuesto.type_application != 'ret':
+            <totalImpuesto>
+            	<codigo>${impuesto.tax_group.evoucher_code}</codigo>
+            	%if impuesto.tax_group.evoucher_code == '2':
+            	<%!taxed_dict = {'taxed0':0,'taxed':2,'notaxed':6}%><codigoPorcentaje>${taxed_dict[impuesto.taxed_type]}</codigoPorcentaje>
+            	%endif
+            	%if impuesto.tax_group.evoucher_code == '3':
+            	<codigoPorcentaje>${impuesto.tax_id.description}</codigoPorcentaje>							
+            	%endif					
+            	<baseImponible>${"{0:.2f}".format(impuesto.base)}</baseImponible>
+            	<tarifa>${int(impuesto.tax_id.amount *100)}</tarifa>
+            	<valor>${"{0:.2f}".format(impuesto.amount)}</valor>		
+            </totalImpuesto>
+            %endif
+            %endfor
+          </totalConImpuestos>
+          %endif
+		<motivo>Ax</motivo>
+	</infoNotaCredito>
+	<detalles>
+    %for line in o.invoice_line:
+    <detalle>
+      <codigoPrincipal>${line.product_id.ean13 or 'N/A'}</codigoPrincipal>   
+      <descripcion>${line.name}</descripcion>
+      <cantidad>${"{0:.2f}".format(line.quantity)}</cantidad>
+      <precioUnitario>${"{0:.2f}".format(line.price_unit)}</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>${"{0:.2f}".format(line.price_subtotal)}</precioTotalSinImpuesto>
+      %if line.invoice_line_tax_id:
+      <impuestos>
+	%for line_tax_line in line.invoice_line_tax_id:			
+	%if line_tax_line.type_application != 'ret':
+	<impuesto>
+	  <codigo>${line_tax_line.tax_group.evoucher_code}</codigo>
+	  %if line_tax_line.tax_group.evoucher_code == '2':			
+	  <%!taxed_dict = {'taxed0':0,'taxed':2,'notaxed':6}%><codigoPorcentaje>${taxed_dict[line_tax_line.taxed_type]}</codigoPorcentaje>	
+	  %endif
+	  %if line_tax_line.tax_group.evoucher_code == '3':	
+	  <codigoPorcentaje>${impuesto.tax_id.description}</codigoPorcentaje>	
+	  %endif
+	  <tarifa>${int(line_tax_line.amount*100)}</tarifa>
+	  <baseImponible>${"{0:.2f}".format(line.price_subtotal)}</baseImponible>
+	  <valor>${"{0:.2f}".format((line.price_subtotal*line_tax_line.amount))}</valor>		
+	</impuesto>
+	%endif
+	%endfor			
+      </impuestos>
+      %endif
+    </detalle>
+    %endfor
+  </detalles>
+  %if o.comment:
+  <infoAdicional>
+    %if '\n' in o.comment:
+    %for n in range(len(o.comment.split('\n'))):
+    <campoAdicional nombre="campo${n}">${o.comment.split('\n')[n]}</campoAdicional>
+    %endfor
+    %else:
+    <campoAdicional nombre="Comentario">${o.comment}</campoAdicional>
+    %endif
+  </infoAdicional>
+  %endif
+  %endfor
+</notaCredito>]]>
+         </field>
+      </record>
+
+      <record model="oa.account.voucher.evoucher.template" id="oa_account_voucher_template_ND_1-1-1">
+         <field name="voucher_id" ref="oalliance_account_sri_data.compNDV"></field>
+         <field name="version">1.1.1</field>
+         <field name="batch">True</field>
+         <field name="template_xml"><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<notaDebito id="comprobante" version="1.1.1">
+	<infoTributaria>
+		<ambiente>${ambiente.sri_code}</ambiente>
+		<tipoEmision>${tipo_emision}</tipoEmision>
+		<razonSocial>${o.company_id.partner_id.full_name or o.company_id.partner_id.name}</razonSocial>
+		<nombreComercial>${o.company_id.partner_id.name}</nombreComercial>
+		<ruc>${o.company_id.ruc}</ruc>
+		<claveAcceso>${clave_acceso(o,ambiente)}</claveAcceso>
+		<codDoc>${o.voucher_id.evoucher_code}</codDoc>
+		<estab>${o.branch_id.serie}</estab>
+		<ptoEmi>${o.emission_id.serie}</ptoEmi>
+		<secuencial>${o.physical_number}</secuencial>
+		<dirMatriz>${o.company_id.street + ' ' + (o.company_id.street2 or '')}</dirMatriz>
+	</infoTributaria>
+	<infoNotaDebito>
+		<fechaEmision>${o.date_invoice[-2:]  + '/' +o.date_invoice[5:7]  + '/' + o.date_invoice[:4]}</fechaEmision>
+    <dirEstablecimiento>${o.branch_id.address or (o.company_id.street + ' ' + o.company_id.street2 or '')}</dirEstablecimiento>
+    %if o.company_id.company_fiscal_position_sale_id.code == 'cfp_especiales_vta':
+    <contribuyenteEspecial>${o.company_id.cont_especial_code_sri or ''}</contribuyenteEspecial>
+    %endif
+    %if o.company_id.require_account_sri:
+    <obligadoContabilidad>${'SI'}</obligadoContabilidad>
+    %else:
+    <obligadoContabilidad>${'NO'}</obligadoContabilidad>
+    %endif
+    <tipoIdentificacionComprador>${o.type_sri_id.sri_code}</tipoIdentificacionComprador>
+    <razonSocialComprador>${o.partner_id.full_name or o.partner_id.name}</razonSocialComprador>
+    <identificacionComprador>${o.sri_id}</identificacionComprador>
+		<codDocModificado>00</codDocModificado>
+		<numDocModificado>000-000-000000000</numDocModificado>
+		<fechaEmisionDocSustento>01/01/1000</fechaEmisionDocSustento>
+		<totalSinImpuestos>${"{0:.2f}".format(o.amount_untaxed)}</totalSinImpuestos>
+		<impuestos>
+  %for impuesto in o.tax_line:
+      %if impuesto.type_application != 'ret':
+      <impuesto>
+ <codigo>${impuesto.tax_group.evoucher_code}</codigo>
+ %if impuesto.tax_group.evoucher_code == '2':
+ <%!taxed_dict = {'taxed0':0,'taxed':2,'notaxed':6}%><codigoPorcentaje>${taxed_dict[impuesto.taxed_type]}</codigoPorcentaje>
+ %endif
+ %if impuesto.tax_group.evoucher_code == '3':
+ <codigoPorcentaje>${impuesto.tax_id.description}</codigoPorcentaje>       
+ %endif     
+ <baseImponible>${"{0:.2f}".format(impuesto.base)}</baseImponible>
+ <valor>${"{0:.2f}".format(impuesto.amount)}</valor>  
+      </totalImpuesto>
+      %endif
+      %endfor
+			
+	<valorTotal>0</valorTotal>
+	</infoNotaDebito>
+	<motivos>
+		<motivo>
+			<razon>Ax</razon>
+			<valor>0</valor>
+		</motivo>
+		<motivo>
+			<razon>Ax</razon>
+			<valor>0</valor>
+		</motivo>
+		<motivo>
+			<razon>Ax</razon>
+			<valor>0</valor>
+		</motivo>
+	</motivos>
+	 <infoAdicional>
+    %if '\n' in o.comment:
+    %for n in range(len(o.comment.split('\n'))):
+    <campoAdicional nombre="campo${n}">${o.comment.split('\n')[n]}</campoAdicional>
+    %endfor
+    %else:
+    <campoAdicional nombre="Comentario">${o.comment}</campoAdicional>
+    %endif
+  </infoAdicional>
+  %endif
+  %endfor
+</notaDebito>]]>
+         </field>
+      </record>
+
+
+      <record model="oa.account.voucher.evoucher.template" id="oa_account_voucher_template_GR_1-1-1">
+         <field name="voucher_id" ref="oalliance_account_sri_data.compguia"></field>
+         <field name="version">1.1.1</field>
+         <field name="batch">True</field>
+         <field name="template_xml"><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<guiaRemision id="comprobante" version="1.1.1">
+ <infoTributaria>
+  <ambiente>1</ambiente>
+  <tipoEmision>1</tipoEmision>
+  <razonSocial>Ax</razonSocial>
+  <nombreComercial>Ax</nombreComercial>
+  <ruc>0000000000001</ruc>
+  <claveAcceso>0000000000000000000000000000000000000000000000000</claveAcceso>
+  <codDoc>00</codDoc>
+  <estab>000</estab>
+  <ptoEmi>000</ptoEmi>
+  <secuencial>000000000</secuencial>
+  <dirMatriz>Ax</dirMatriz>
+ </infoTributaria>
+ <infoGuiaRemision>
+  <dirEstablecimiento>Ax</dirEstablecimiento>
+  <dirPartida>Ax</dirPartida>
+  <razonSocialTransportista>Ax</razonSocialTransportista>
+  <tipoIdentificacionTransportista>05</tipoIdentificacionTransportista>
+  <rucTransportista>Ax</rucTransportista>
+  <rise>Rise</rise>
+  <obligadoContabilidad>SI</obligadoContabilidad>
+  <contribuyenteEspecial>123</contribuyenteEspecial>
+  <fechaIniTransporte>01/01/1000</fechaIniTransporte>
+  <fechaFinTransporte>01/01/1000</fechaFinTransporte>
+  <placa>Ax</placa>
+ </infoGuiaRemision>
+ <destinatarios>
+  <destinatario>
+   <identificacionDestinatario>Ax</identificacionDestinatario>
+   <razonSocialDestinatario>Ax</razonSocialDestinatario>
+   <dirDestinatario>Ax</dirDestinatario>
+   <motivoTraslado>Ax</motivoTraslado>
+   <docAduaneroUnico>Ax</docAduaneroUnico>
+   <codEstabDestino>000</codEstabDestino>
+   <ruta>Ax</ruta>
+   <codDocSustento>00</codDocSustento>
+   <numDocSustento>000-000-000000000</numDocSustento>
+   <numAutDocSustento>0000000000</numAutDocSustento>
+   <fechaEmisionDocSustento>01/01/1000</fechaEmisionDocSustento>
+   <detalles>
+    <detalle>
+     <codigoInterno>Ax</codigoInterno>
+     <codigoAdicional>Ax</codigoAdicional>
+     <descripcion>Ax</descripcion>
+     <cantidad>0</cantidad>
+     <detallesAdicionales>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+     </detallesAdicionales>
+    </detalle>
+    <detalle>
+     <codigoInterno>Ax</codigoInterno>
+     <codigoAdicional>Ax</codigoAdicional>
+     <descripcion>Ax</descripcion>
+     <cantidad>0</cantidad>
+     <detallesAdicionales>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+     </detallesAdicionales>
+    </detalle>
+    <detalle>
+     <codigoInterno>Ax</codigoInterno>
+     <codigoAdicional>Ax</codigoAdicional>
+     <descripcion>Ax</descripcion>
+     <cantidad>0</cantidad>
+     <detallesAdicionales>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+     </detallesAdicionales>
+    </detalle>
+   </detalles>
+  </destinatario>
+  <destinatario>
+   <identificacionDestinatario>Ax</identificacionDestinatario>
+   <razonSocialDestinatario>Ax</razonSocialDestinatario>
+   <dirDestinatario>Ax</dirDestinatario>
+   <motivoTraslado>Ax</motivoTraslado>
+   <docAduaneroUnico>Ax</docAduaneroUnico>
+   <codEstabDestino>000</codEstabDestino>
+   <ruta>Ax</ruta>
+   <codDocSustento>00</codDocSustento>
+   <numDocSustento>000-000-000000000</numDocSustento>
+   <numAutDocSustento>0000000000</numAutDocSustento>
+   <fechaEmisionDocSustento>01/01/1000</fechaEmisionDocSustento>
+   <detalles>
+    <detalle>
+     <codigoInterno>Ax</codigoInterno>
+     <codigoAdicional>Ax</codigoAdicional>
+     <descripcion>Ax</descripcion>
+     <cantidad>0</cantidad>
+     <detallesAdicionales>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+     </detallesAdicionales>
+    </detalle>
+    <detalle>
+     <codigoInterno>Ax</codigoInterno>
+     <codigoAdicional>Ax</codigoAdicional>
+     <descripcion>Ax</descripcion>
+     <cantidad>0</cantidad>
+     <detallesAdicionales>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+     </detallesAdicionales>
+    </detalle>
+    <detalle>
+     <codigoInterno>Ax</codigoInterno>
+     <codigoAdicional>Ax</codigoAdicional>
+     <descripcion>Ax</descripcion>
+     <cantidad>0</cantidad>
+     <detallesAdicionales>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+     </detallesAdicionales>
+    </detalle>
+   </detalles>
+  </destinatario>
+  <destinatario>
+   <identificacionDestinatario>Ax</identificacionDestinatario>
+   <razonSocialDestinatario>Ax</razonSocialDestinatario>
+   <dirDestinatario>Ax</dirDestinatario>
+   <motivoTraslado>Ax</motivoTraslado>
+   <docAduaneroUnico>Ax</docAduaneroUnico>
+   <codEstabDestino>000</codEstabDestino>
+   <ruta>Ax</ruta>
+   <codDocSustento>00</codDocSustento>
+   <numDocSustento>000-000-000000000</numDocSustento>
+   <numAutDocSustento>0000000000</numAutDocSustento>
+   <fechaEmisionDocSustento>01/01/1000</fechaEmisionDocSustento>
+   <detalles>
+    <detalle>
+     <codigoInterno>Ax</codigoInterno>
+     <codigoAdicional>Ax</codigoAdicional>
+     <descripcion>Ax</descripcion>
+     <cantidad>0</cantidad>
+     <detallesAdicionales>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+     </detallesAdicionales>
+    </detalle>
+    <detalle>
+     <codigoInterno>Ax</codigoInterno>
+     <codigoAdicional>Ax</codigoAdicional>
+     <descripcion>Ax</descripcion>
+     <cantidad>0</cantidad>
+     <detallesAdicionales>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+     </detallesAdicionales>
+    </detalle>
+    <detalle>
+     <codigoInterno>Ax</codigoInterno>
+     <codigoAdicional>Ax</codigoAdicional>
+     <descripcion>Ax</descripcion>
+     <cantidad>0</cantidad>
+     <detallesAdicionales>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+      <detAdicional nombre="Ax" valor="Ax"/>
+     </detallesAdicionales>
+    </detalle>
+   </detalles>
+  </destinatario>
+ </destinatarios>
+ <infoAdicional>
+  <campoAdicional nombre="Ax">Ax</campoAdicional>
+  <campoAdicional nombre="Ax">Ax</campoAdicional>
+  <campoAdicional nombre="Ax">Ax</campoAdicional>
+ </infoAdicional>
+</guiaRemision>]]>
+         </field>
+      </record>
+
+      <record model="oa.account.voucher.evoucher.template" id="oa_account_voucher_template_fac_1-1-2">
+         <field name="voucher_id" ref="oalliance_account_sri_data.compdocventas"></field>
+         <field name="version">1.1.2</field>
+         <field name="batch">True</field>
+         <field name="template_xml"><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+%for o in objects:
+ <factura id="comprobante" version="1.1.2">
+  <infoTributaria>
+   <ambiente>${ambiente.sri_code}</ambiente>
+   <tipoEmision>${tipo_emision}</tipoEmision>
+   <razonSocial>${o.company_id.partner_id.full_name or o.company_id.partner_id.name}</razonSocial>
+   <ruc>${o.company_id.ruc}</ruc>
+   <claveAcceso>${clave_acceso(o,ambiente)}</claveAcceso>
+   <codDoc>${o.voucher_id.evoucher_code}</codDoc>
+   <estab>${o.branch_id.serie}</estab>
+   <ptoEmi>${o.emission_id.serie}</ptoEmi>
+   <secuencial>${o.physical_number}</secuencial>
+   <dirMatriz>${o.company_id.street + ' ' + (o.company_id.street2 or '')}</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+   <fechaEmision>${o.date_invoice[-2:]  + '/' +o.date_invoice[5:7]  + '/' + o.date_invoice[:4]}</fechaEmision>
+   %if o.company_id.company_fiscal_position_sale_id.code == 'cfp_especiales_vta':
+    <contribuyenteEspecial>${o.company_id.cont_especial_code_sri or ''}</contribuyenteEspecial>
+   %endif
+   %if o.company_id.require_account_sri:
+    <obligadoContabilidad>${'SI'}</obligadoContabilidad>
+   %else:
+    <obligadoContabilidad>${'NO'}</obligadoContabilidad>
+   %endif
+   <tipoIdentificacionComprador>${o.type_sri_id.sri_code}</tipoIdentificacionComprador>
+   <razonSocialComprador>${o.partner_id.full_name or o.partner_id.name}</razonSocialComprador>
+   <identificacionComprador>${o.sri_id}</identificacionComprador>
+   <totalSinImpuestos>${"{0:.2f}".format(o.amount_untaxed)}</totalSinImpuestos>
+   <totalDescuento>0.00</totalDescuento>   
+   %if o.grupos_fac:
+    <totalConImpuestos>  
+     %for grupo_code in o.grupos_fac.keys():
+      %for tax_code in o.grupos_fac[grupo_code].keys():
+       <totalImpuesto>
+        <codigo>${grupo_code}</codigo>  
+        <codigoPorcentaje>${tax_code}</codigoPorcentaje>  
+        <baseImponible>${"{0:.2f}".format(o.grupos_fac[grupo_code][tax_code]['base'])}</baseImponible>
+        <tarifa>${int(o.grupos_fac[grupo_code][tax_code]['percent']*100)}</tarifa>
+        <valor>${"{0:.2f}".format(o.grupos_fac[grupo_code][tax_code]['base'] * o.grupos_fac[grupo_code][tax_code]['percent'])}</valor>  
+        </totalImpuesto>
+      %endfor
+     %endfor
+    </totalConImpuestos>
+   %endif
+   <propina>0.00</propina>
+   <importeTotal>${"{0:.2f}".format(o.amount_total)}</importeTotal>
+   %if o.company_id.currency_id.name == 'USD':
+    <moneda>DOLAR</moneda>
+   %else:
+    <moneda>${o.company_id.currency_id.name}</moneda>
+   %endif
+  </infoFactura>
+  <detalles>
+   %for line in o.invoice_line:
+    <detalle>
+     <codigoPrincipal>${line.product_id.ean13 or 'N/A'}</codigoPrincipal>   
+     <descripcion>${line.name}</descripcion>
+     <cantidad>${"{0:.2f}".format(line.quantity)}</cantidad>
+     <precioUnitario>${"{0:.2f}".format(line.price_unit)}</precioUnitario>
+     <descuento>0.00</descuento>
+     <precioTotalSinImpuesto>${"{0:.2f}".format(line.price_subtotal)}</precioTotalSinImpuesto>     
+     %if line.grupos_line:
+      <impuestos>
+       %for grupo_code in line.grupos_line.keys():
+        %for tax_code in line.grupos_line[grupo_code].keys():
+         <impuesto>
+          <codigo>${grupo_code}</codigo>  
+          <codigoPorcentaje>${tax_code}</codigoPorcentaje>            
+          <tarifa>${int(line.grupos_line[grupo_code][tax_code]['percent']*100)}</tarifa>
+          <baseImponible>${"{0:.2f}".format(line.grupos_line[grupo_code][tax_code]['base'])}</baseImponible>
+          <valor>${"{0:.2f}".format(line.grupos_line[grupo_code][tax_code]['base'] * line.grupos_line[grupo_code][tax_code]['percent'])}</valor>    
+         </impuesto>
+        %endfor
+       %endfor   
+      </impuestos>
+     %endif
+    </detalle>
+   %endfor
+  </detalles>
+  %if o.retenciones:
+  <retenciones>
+        <retencion>
+     <codigo>4</codigo>
+     <codigoPorcentaje>327</codigoPorcentaje>
+     <tarifa>0.00</tarifa>     
+     <valor>0.00</valor>
+        </retencion>
+        <retencion>
+     <codigo>4</codigo>
+     <codigoPorcentaje>328</codigoPorcentaje>
+     <tarifa>0.00</tarifa>     
+     <valor>0.00</valor>
+        </retencion>
+   <retencion>
+   %endif
+     <codigo>4</codigo>
+     <codigoPorcentaje>3</codigoPorcentaje>
+     <tarifa>1</tarifa>     
+     <valor>0.00</valor>
+        </retencion>
+    </retenciones>
+  %if o.comment:
+   <infoAdicional>
+    %if '\n' in o.comment:
+     %for n in range(len(o.comment.split('\n'))):
+      <campoAdicional nombre="campo${n}">${o.comment.split('\n')[n]}</campoAdicional>
+     %endfor
+    %else:
+     <campoAdicional nombre="Comentario">${o.comment}</campoAdicional>
+    %endif
+   </infoAdicional>
+  %endif
+ </factura>
+%endfor
+]]></field>
+      </record>
+      <!-- REEMBOLSO -->
+      <record model="oa.account.voucher.evoucher.template" id="oa_account_voucher_template_facreem_1-1-2">
+         <field name="voucher_id" ref="oalliance_account_sri_data.compcomremv"></field>
+         <field name="version">1.1.2</field>
+         <field name="batch">True</field>
+         <field name="template_xml"><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+%for o in objects:
+ <factura id="comprobante" version="1.1.2">
+  <infoTributaria>
+   <ambiente>${ambiente.sri_code}</ambiente>
+   <tipoEmision>${tipo_emision}</tipoEmision>
+   <razonSocial>${o.company_id.partner_id.full_name or o.company_id.partner_id.name}</razonSocial>
+   <ruc>${o.company_id.ruc}</ruc>
+   <claveAcceso>${clave_acceso(o,ambiente)}</claveAcceso>
+   <codDoc>${o.voucher_id.evoucher_code}</codDoc>
+   <estab>${o.branch_id.serie}</estab>
+   <ptoEmi>${o.emission_id.serie}</ptoEmi>
+   <secuencial>${o.physical_number}</secuencial>
+   <dirMatriz>${o.company_id.street + ' ' + (o.company_id.street2 or '')}</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+   <fechaEmision>${o.date_invoice[-2:]  + '/' +o.date_invoice[5:7]  + '/' + o.date_invoice[:4]}</fechaEmision>
+   %if o.company_id.company_fiscal_position_sale_id.code == 'cfp_especiales_vta':
+    <contribuyenteEspecial>${o.company_id.cont_especial_code_sri or ''}</contribuyenteEspecial>
+   %endif
+   %if o.company_id.require_account_sri:
+    <obligadoContabilidad>${'SI'}</obligadoContabilidad>
+   %else:
+    <obligadoContabilidad>${'NO'}</obligadoContabilidad>
+   %endif
+   <tipoIdentificacionComprador>${o.type_sri_id.sri_code}</tipoIdentificacionComprador>
+   <razonSocialComprador>${o.partner_id.full_name or o.partner_id.name}</razonSocialComprador>
+   <identificacionComprador>${o.sri_id}</identificacionComprador>
+   <totalSinImpuestos>${"{0:.2f}".format(o.amount_untaxed)}</totalSinImpuestos>
+   <totalDescuento>0.00</totalDescuento>   
+   %if o.grupos_fac:
+    <totalConImpuestos>  
+     %for grupo_code in o.grupos_fac.keys():
+      %for tax_code in o.grupos_fac[grupo_code].keys():
+       <totalImpuesto>
+        <codigo>${grupo_code}</codigo>  
+        <codigoPorcentaje>${tax_code}</codigoPorcentaje>  
+        <baseImponible>${"{0:.2f}".format(o.grupos_fac[grupo_code][tax_code]['base'])}</baseImponible>
+        <tarifa>${int(o.grupos_fac[grupo_code][tax_code]['percent']*100)}</tarifa>
+        <valor>${"{0:.2f}".format(o.grupos_fac[grupo_code][tax_code]['base'] * o.grupos_fac[grupo_code][tax_code]['percent'])}</valor>  
+        </totalImpuesto>
+      %endfor
+     %endfor
+    </totalConImpuestos>
+   %endif
+   <propina>0.00</propina>
+   <importeTotal>${"{0:.2f}".format(o.amount_total)}</importeTotal>
+   %if o.company_id.currency_id.name == 'USD':
+    <moneda>DOLAR</moneda>
+   %else:
+    <moneda>${o.company_id.currency_id.name}</moneda>
+   %endif
+  </infoFactura>
+  <detalles>
+   %for line in o.invoice_line:
+    <detalle>
+     <codigoPrincipal>${line.product_id.ean13 or 'N/A'}</codigoPrincipal>   
+     <descripcion>${line.name}</descripcion>
+     <cantidad>${"{0:.2f}".format(line.quantity)}</cantidad>
+     <precioUnitario>${"{0:.2f}".format(line.price_unit)}</precioUnitario>
+     <descuento>0.00</descuento>
+     <precioTotalSinImpuesto>${"{0:.2f}".format(line.price_subtotal)}</precioTotalSinImpuesto>     
+     %if line.grupos_line:
+      <impuestos>
+       %for grupo_code in line.grupos_line.keys():
+        %for tax_code in line.grupos_line[grupo_code].keys():
+         <impuesto>
+          <codigo>${grupo_code}</codigo>  
+          <codigoPorcentaje>${tax_code}</codigoPorcentaje>            
+          <tarifa>${int(line.grupos_line[grupo_code][tax_code]['percent']*100)}</tarifa>
+          <baseImponible>${"{0:.2f}".format(line.grupos_line[grupo_code][tax_code]['base'])}</baseImponible>
+          <valor>${"{0:.2f}".format(line.grupos_line[grupo_code][tax_code]['base'] * line.grupos_line[grupo_code][tax_code]['percent'])}</valor>    
+         </impuesto>
+        %endfor
+       %endfor   
+      </impuestos>
+     %endif
+    </detalle>
+   %endfor
+  </detalles>
+  %if o.retenciones:
+  <retenciones>
+        <retencion>
+     <codigo>4</codigo>
+     <codigoPorcentaje>327</codigoPorcentaje>
+     <tarifa>0.00</tarifa>     
+     <valor>0.00</valor>
+        </retencion>
+        <retencion>
+     <codigo>4</codigo>
+     <codigoPorcentaje>328</codigoPorcentaje>
+     <tarifa>0.00</tarifa>     
+     <valor>0.00</valor>
+        </retencion>
+   <retencion>
+   %endif
+     <codigo>4</codigo>
+     <codigoPorcentaje>3</codigoPorcentaje>
+     <tarifa>1</tarifa>     
+     <valor>0.00</valor>
+        </retencion>
+    </retenciones>
+  %if o.comment:
+   <infoAdicional>
+    %if '\n' in o.comment:
+     %for n in range(len(o.comment.split('\n'))):
+      <campoAdicional nombre="campo${n}">${o.comment.split('\n')[n]}</campoAdicional>
+     %endfor
+    %else:
+     <campoAdicional nombre="Comentario">${o.comment}</campoAdicional>
+    %endif
+   </infoAdicional>
+  %endif
+ </factura>
+%endfor
+]]></field>
+      </record>
+
+      <record model="oa.account.voucher.evoucher.template" id="oa_account_voucher_template_GR_1-1-2">
+         <field name="voucher_id" ref="oalliance_account_sri_data.compguia"></field>
+         <field name="version">1.1.2</field>
+         <field name="batch">True</field>
+         <field name="template_xml"><![CDATA[
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<guiaRemision id="comprobante" version="1.1.2">
+    <infoTributaria>
+        <ambiente>1</ambiente>
+        <tipoEmision>1</tipoEmision>
+        <razonSocial>XYZ</razonSocial>
+        <nombreComercial>XYZ</nombreComercial>
+        <ruc>0000000000001</ruc>
+        <claveAcceso>2103201306000000000000110015010000000091234567818</claveAcceso>
+        <codDoc>06</codDoc>
+        <estab>001</estab>
+        <ptoEmi>501</ptoEmi>
+        <secuencial>000000009</secuencial>
+        <dirMatriz>AMAZONAS</dirMatriz>
+    </infoTributaria>
+    <infoGuiaRemision>
+        <dirEstablecimiento>AMAZONAS</dirEstablecimiento>
+        <dirPartida>abcd</dirPartida>
+        <razonSocialTransportista>TRANSPORTISTA PN</razonSocialTransportista>
+        <tipoIdentificacionTransportista>05</tipoIdentificacionTransportista>
+        <rucTransportista>1705843251</rucTransportista>
+        <obligadoContabilidad>SI</obligadoContabilidad>
+        <contribuyenteEspecial>12345</contribuyenteEspecial>
+        <fechaIniTransporte>21/03/2013</fechaIniTransporte>
+        <fechaFinTransporte>21/03/2013</fechaFinTransporte>
+        <placa>PQH0450</placa>
+    </infoGuiaRemision>
+    <destinatarios>
+        <destinatario>
+            <identificacionDestinatario>1703251180</identificacionDestinatario>
+            <razonSocialDestinatario>DESTINATARIO PN</razonSocialDestinatario>
+            <dirDestinatario>abcd</dirDestinatario>
+            <motivoTraslado>abcd</motivoTraslado>
+            <docAduaneroUnico>12345</docAduaneroUnico>
+            <codEstabDestino>001</codEstabDestino>
+            <ruta>abcd</ruta>
+            <codDocSustento>01</codDocSustento>
+            <numDocSustento>001-001-000000001</numDocSustento>
+            <numAutDocSustento>0000000000000000000000000000000000000</numAutDocSustento>
+            <fechaEmisionDocSustento>21/03/2013</fechaEmisionDocSustento>
+            <detalles>
+                <detalle>
+                    <codigoInterno>011</codigoInterno>
+                    <descripcion>PRUEBA</descripcion>
+                    <cantidad>0.000000</cantidad>
+                </detalle>
+            </detalles>
+        </destinatario>
+    </destinatarios>
+</guiaRemision>]]>
+         </field>
+      </record>
+
+      <record model="oa.account.voucher.evoucher.template" id="oa_account_voucher_template_NC_1-1-2">
+         <field name="voucher_id" ref="oalliance_account_sri_data.compNCV"></field>
+         <field name="version">1.1.2</field>
+         <field name="batch">True</field>
+         <field name="template_xml"><![CDATA[
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+%for o in objects:
+<notaCredito id="comprobante" version="1.1.2">
+    <infoTributaria>
+        <ambiente>${ambiente.sri_code}</ambiente>
+		<tipoEmision>${tipo_emision}</tipoEmision>
+		<razonSocial>${o.company_id.partner_id.full_name or o.company_id.partner_id.name}</razonSocial>
+		<nombreComercial>${o.company_id.partner_id.name}</nombreComercial>
+		<ruc>${o.company_id.ruc}</ruc>
+		<claveAcceso>${clave_acceso(o,ambiente)}</claveAcceso>
+		<codDoc>${o.voucher_id.evoucher_code}</codDoc>
+		<estab>${o.branch_id.serie}</estab>
+		<ptoEmi>${o.emission_id.serie}</ptoEmi>
+		<secuencial>${o.physical_number}</secuencial>
+		<dirMatriz>${o.company_id.street + ' ' + (o.company_id.street2 or '')}</dirMatriz>
+    </infoTributaria>
+    <infoNotaCredito>
+      <fechaEmision>${o.date_invoice[-2:]  + '/' +o.date_invoice[5:7]  + '/' + o.date_invoice[:4]}</fechaEmision>
+    <dirEstablecimiento>${o.branch_id.address or (o.company_id.street + ' ' + o.company_id.street2 or '')}</dirEstablecimiento>
+    %if o.company_id.company_fiscal_position_sale_id.code == 'cfp_especiales_vta':
+    <contribuyenteEspecial>${o.company_id.cont_especial_code_sri or ''}</contribuyenteEspecial>
+    %endif
+    %if o.company_id.require_account_sri:
+    <obligadoContabilidad>${'SI'}</obligadoContabilidad>
+    %else:
+    <obligadoContabilidad>${'NO'}</obligadoContabilidad>
+    %endif
+    <tipoIdentificacionComprador>${o.type_sri_id.sri_code}</tipoIdentificacionComprador>
+    <razonSocialComprador>${o.partner_id.full_name or o.partner_id.name}</razonSocialComprador>
+    <identificacionComprador>${o.sri_id}</identificacionComprador>
+        <codDocModificado>01</codDocModificado>
+        <numDocModificado>001-001-000000000</numDocModificado>
+        <fechaEmisionDocSustento>20/03/2013</fechaEmisionDocSustento>
+        <totalSinImpuestos>${"{0:.2f}".format(o.amount_untaxed)}</totalSinImpuestos>
+		<valorModificacion>0</valorModificacion>
+        %if o.company_id.currency_id.name == 'USD':
+         <moneda>DOLAR</moneda>
+        %else:
+         <moneda>${o.company_id.currency_id.name}</moneda>
+        %endif
+        %if o.tax_line:
+        <totalConImpuestos>
+            %for impuesto in o.tax_line:
+            %if impuesto.type_application != 'ret':
+            <totalImpuesto>
+            	<codigo>${impuesto.tax_group.evoucher_code}</codigo>
+            	%if impuesto.tax_group.evoucher_code == '2':
+            	<%!taxed_dict = {'taxed0':0,'taxed':2,'notaxed':6}%><codigoPorcentaje>${taxed_dict[impuesto.taxed_type]}</codigoPorcentaje>
+            	%endif
+            	%if impuesto.tax_group.evoucher_code == '3':
+            	<codigoPorcentaje>${impuesto.tax_id.description}</codigoPorcentaje>							
+            	%endif					
+            	<baseImponible>${"{0:.2f}".format(impuesto.base)}</baseImponible>
+            	<tarifa>${int(impuesto.tax_id.amount *100)}</tarifa>
+            	<valor>${"{0:.2f}".format(impuesto.amount)}</valor>		
+            </totalImpuesto>
+            %endif
+            %endfor
+        </totalConImpuestos>
+        %endif
+        <motivo>abcd</motivo>
+    </infoNotaCredito>
+    <detalles>
+    %for line in o.invoice_line:
+    <detalle>
+      <codigoPrincipal>${line.product_id.ean13 or 'N/A'}</codigoPrincipal>   
+      <descripcion>${line.name}</descripcion>
+      <cantidad>${"{0:.2f}".format(line.quantity)}</cantidad>
+      <precioUnitario>${"{0:.2f}".format(line.price_unit)}</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>${"{0:.2f}".format(line.price_subtotal)}</precioTotalSinImpuesto>
+      %if line.invoice_line_tax_id:
+      <impuestos>
+	%for line_tax_line in line.invoice_line_tax_id:			
+	%if line_tax_line.type_application != 'ret':
+	<impuesto>
+	  <codigo>${line_tax_line.tax_group.evoucher_code}</codigo>
+	  %if line_tax_line.tax_group.evoucher_code == '2':			
+	  <%!taxed_dict = {'taxed0':0,'taxed':2,'notaxed':6}%><codigoPorcentaje>${taxed_dict[line_tax_line.taxed_type]}</codigoPorcentaje>	
+	  %endif
+	  %if line_tax_line.tax_group.evoucher_code == '3':	
+	  <codigoPorcentaje>${impuesto.tax_id.description}</codigoPorcentaje>	
+	  %endif
+	  <tarifa>${int(line_tax_line.amount*100)}</tarifa>
+	  <baseImponible>${"{0:.2f}".format(line.price_subtotal)}</baseImponible>
+	  <valor>${"{0:.2f}".format((line.price_subtotal*line_tax_line.amount))}</valor>		
+	</impuesto>
+	%endif
+	%endfor			
+      </impuestos>
+      %endif
+    </detalle>
+    %endfor
+  </detalles>
+  %if o.comment:
+  <infoAdicional>
+    %if '\n' in o.comment:
+    %for n in range(len(o.comment.split('\n'))):
+    <campoAdicional nombre="campo${n}">${o.comment.split('\n')[n]}</campoAdicional>
+    %endfor
+    %else:
+    <campoAdicional nombre="Comentario">${o.comment}</campoAdicional>
+    %endif
+  </infoAdicional>
+  %endif
+  %endfor
+</notaCredito>]]>
+         </field>
+      </record>
+  
+  <!-- LIQ DE COMPRAS -->
+      <record model="oa.account.voucher.evoucher.template" id="oa_account_voucher_template_liqcompra_1-0-2">
+         <field name="voucher_id" ref="oalliance_account_sri_data.compliquidaciones"></field>
+         <field name="version">1.0.2</field>
+         <field name="batch">True</field>
+         <field name="template_xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<liquidacionCompra xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="comprobante" version="1.0.0">
+  %for o in objects:
+  <infoTributaria>
+    <ambiente>${ambiente.sri_code}</ambiente>
+    <tipoEmision>${tipo_emision}</tipoEmision>
+    <razonSocial>${o.company_id.partner_id.full_name or o.company_id.partner_id.name}</razonSocial>
+    <nombreComercial>${o.company_id.partner_id.name}</nombreComercial>
+    <ruc>${o.company_id.ruc}</ruc>
+    <claveAcceso>${clave_acceso(o,ambiente,tipo_emision)}</claveAcceso>
+    <codDoc>${o.voucher_id.evoucher_code}</codDoc>
+    <estab>${o.branch_id.serie}</estab>
+    <ptoEmi>${o.emission_id.serie}</ptoEmi>
+    <secuencial>${o.physical_number[-9:]}</secuencial>
+    <dirMatriz>${o.company_id.street + ' ' + (o.company_id.street2 or '')}</dirMatriz>
+  </infoTributaria>
+  <infoLiquidacionCompra>
+    <fechaEmision>${o.date_invoice[-2:]  + '/' +o.date_invoice[5:7]  + '/' + o.date_invoice[:4]}</fechaEmision>
+    <dirEstablecimiento>${o.branch_id.address or (o.company_id.street + ' ' + o.company_id.street2 or '')}</dirEstablecimiento>
+    %if o.company_id.company_fiscal_position_sale_id.code == 'cfp_especiales_vta':
+    <contribuyenteEspecial>${o.company_id.cont_especial_code_sri or ''}</contribuyenteEspecial>
+    %endif
+    %if o.company_id.require_account_sri:
+    <obligadoContabilidad>${'SI'}</obligadoContabilidad>
+    %else:
+    <obligadoContabilidad>${'NO'}</obligadoContabilidad>
+    %endif
+    <tipoIdentificacionComprador>${o.type_sri_id.sri_code}</tipoIdentificacionComprador>
+    <razonSocialComprador>${o.full_name or o.partner_id.full_name or o.partner_id.name}</razonSocialComprador>
+    <identificacionComprador>${o.sri_id}</identificacionComprador>
+    %if o.street2:
+      <direccionComprador>${o.street + o.street2}</direccionComprador>
+    %else:
+      <direccionComprador>${o.street or ''}</direccionComprador>
+    %endif
+    <totalSinImpuestos>${"{0:.2f}".format(o.amount_untaxed)}</totalSinImpuestos>
+    %if o.discount_total:
+      <totalDescuento>${"{0:.2f}".format(o.discount_total)}</totalDescuento>
+    %else:
+      <totalDescuento>0.00</totalDescuento>
+    %endif    
+    %if o.tax_line:
+    <totalConImpuestos>
+      %for impuesto in o.tax_line:
+      %if impuesto.type_application != 'ret':
+      <totalImpuesto>
+   <codigo>${impuesto.tax_group.evoucher_code}</codigo>
+   %if impuesto.tax_group.evoucher_code == '2':
+      %if impuesto.tax_id.evoucher_code:
+         <codigoPorcentaje>${impuesto.tax_id.evoucher_code}</codigoPorcentaje>
+      %else:
+         <%!taxed_dict = {'taxed0':0,'taxed':2,'notaxed':6}%><codigoPorcentaje>${taxed_dict[impuesto.taxed_type]}</codigoPorcentaje>
+      %endif
+   %endif
+   %if impuesto.tax_group.evoucher_code == '3':
+   <codigoPorcentaje>${impuesto.tax_id.description}</codigoPorcentaje>                    
+   %endif               
+   <baseImponible>${"{0:.2f}".format(impuesto.base)}</baseImponible>
+   <tarifa>${int(impuesto.tax_id.amount *100)}</tarifa>
+   <valor>${"{0:.2f}".format(impuesto.amount)}</valor>      
+      </totalImpuesto>
+      %endif
+      %endfor
+    </totalConImpuestos>
+    %endif
+    <propina>0.00</propina>
+    <importeTotal>${"{0:.2f}".format(o.amount_total)}</importeTotal>
+    %if o.company_id.currency_id.name == 'USD':
+    <moneda>DOLAR</moneda>
+    %else:
+    <moneda>${o.company_id.currency_id.name}</moneda>
+    %endif
+    %if len(o.payment_type_ids) != 0:
+      <pagos>
+          %for pago in o.payment_type_ids:
+            <pago>
+                <formaPago>${pago.payment_type_id.code}</formaPago>
+                <total>${"{0:.2f}".format(pago.amount)}</total>
+            </pago> 
+          %endfor
+      </pagos>
+   %endif
+  </infoLiquidacionCompra>
+  <detalles>
+    %for line in o.invoice_line:
+    <detalle>
+      <codigoPrincipal>${line.product_id.ean13 or 'N/A'}</codigoPrincipal>   
+      <descripcion>${line.name}</descripcion>
+      <cantidad>${"{0:.2f}".format(line.quantity)}</cantidad>
+      %if line.discount:
+         %if line.discount == 100:
+            <precioUnitario>${"{0:.2f}".format(line.real_price_unit*line.quantity)}</precioUnitario>
+            <descuento>${"{0:.2f}".format((line.quantity * line.real_price_unit)-(line.price_subtotal))}</descuento>
+         %else:
+            <precioUnitario>${"{0:.2f}".format(min(line.price_unit,((1/(1-line.discount/100))*line.price_subtotal)/line.quantity))}</precioUnitario>
+            <descuento>${"{0:.2f}".format(line.discount_line)}</descuento>
+         %endif
+     %else:
+         <precioUnitario>${"{0:.2f}".format(line.price_subtotal/line.quantity)}</precioUnitario>
+         <descuento>0.00</descuento>
+     %endif
+      <precioTotalSinImpuesto>${"{0:.2f}".format(line.price_subtotal)}</precioTotalSinImpuesto>
+      %if line.invoice_line_tax_id:
+      <impuestos>
+   %for line_tax_line in line.invoice_line_tax_id:       
+   %if line_tax_line.type_application != 'ret':
+   <impuesto>
+     <codigo>${line_tax_line.tax_group.evoucher_code}</codigo>
+     %if line_tax_line.tax_group.evoucher_code == '2':   
+         %if line_tax_line.evoucher_code:
+            <codigoPorcentaje>${line_tax_line.evoucher_code}</codigoPorcentaje>
+         %else:
+            <%!taxed_dict = {'taxed0':0,'taxed':2,'notaxed':6}%><codigoPorcentaje>${taxed_dict[line_tax_line.taxed_type]}</codigoPorcentaje>
+         %endif
+     %endif
+     %if line_tax_line.tax_group.evoucher_code == '3':   
+     <codigoPorcentaje>${impuesto.tax_id.description}</codigoPorcentaje>   
+     %endif
+     <tarifa>${int(line_tax_line.amount*100)}</tarifa>
+     <baseImponible>${"{0:.2f}".format(line.price_subtotal)}</baseImponible>
+     <valor>${"{0:.2f}".format((line.price_subtotal*line_tax_line.amount))}</valor>    
+   </impuesto>
+   %endif
+   %endfor        
+      </impuestos>
+      %endif
+    </detalle>
+    %endfor
+  </detalles>
+ %if o.comment:
+   <infoAdicional>
+    %if '\n' in o.comment:
+     %for n in range(len(o.comment.strip().split('\n'))):
+      %if o.comment.split('\n')[n]:
+            <campoAdicional nombre="campo${n}">${o.comment.split('\n')[n]}</campoAdicional>
+         %endif
+     %endfor
+    %else:
+        %if o.comment:
+         <campoAdicional nombre="campoadicional">${o.comment}</campoAdicional>
+        %endif
+    %endif
+   </infoAdicional>
+  %endif
+  %endfor
+</liquidacionCompra>]]></field>
+      </record>
+
+      <record model="oa.account.voucher.evoucher.template" id="oa_account_voucher_template_liqcompra_1-1-2">
+         <field name="voucher_id" ref="oalliance_account_sri_data.compliquidaciones"></field>
+         <field name="version">1.1.2</field>
+         <field name="batch">True</field>
+         <field name="template_xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+%for o in objects:
+ <liquidacionCompra id="comprobante" version="1.1.0">
+  <infoTributaria>
+   <ambiente>${ambiente.sri_code}</ambiente>
+   <tipoEmision>${tipo_emision}</tipoEmision>
+   <razonSocial>${o.company_id.partner_id.full_name or o.company_id.partner_id.name}</razonSocial>
+   <ruc>${o.company_id.ruc}</ruc>
+   <claveAcceso>${clave_acceso(o,ambiente,tipo_emision)}</claveAcceso>
+   <codDoc>${o.voucher_id.evoucher_code}</codDoc>
+   <estab>${o.branch_id.serie}</estab>
+   <ptoEmi>${o.emission_id.serie}</ptoEmi>
+   <secuencial>${o.physical_number[-9:]}</secuencial>
+   <dirMatriz>${o.company_id.street + ' ' + (o.company_id.street2 or '')}</dirMatriz>
+  </infoTributaria>
+  <infoLiquidacionCompra>
+   <fechaEmision>${o.date_invoice[-2:]  + '/' +o.date_invoice[5:7]  + '/' + o.date_invoice[:4]}</fechaEmision>
+   %if o.company_id.company_fiscal_position_sale_id.code == 'cfp_especiales_vta':
+    <contribuyenteEspecial>${o.company_id.cont_especial_code_sri or ''}</contribuyenteEspecial>
+   %endif
+   %if o.company_id.require_account_sri:
+    <obligadoContabilidad>${'SI'}</obligadoContabilidad>
+   %else:
+    <obligadoContabilidad>${'NO'}</obligadoContabilidad>
+   %endif
+   <tipoIdentificacionProveedor>${o.type_sri_id.sri_code}</tipoIdentificacionProveedor>
+   <razonSocialProveedor>${o.full_name or o.partner_id.full_name or o.partner_id.name}</razonSocialProveedor>
+   <identificacionProveedor>${o.sri_id}</identificacionProveedor>
+   %if o.street2:
+      <direccionProveedor>${o.street + o.street2}</direccionProveedor>
+   %else:
+      <direccionProveedor>${o.street or ''}</direccionProveedor>
+   %endif
+   <totalSinImpuestos>${"{0:.2f}".format(o.amount_untaxed)}</totalSinImpuestos>
+   %if o.discount_total:
+      <totalDescuento>${"{0:.2f}".format(o.total_discount)}</totalDescuento>
+    %else:
+      <totalDescuento>0.00</totalDescuento>
+   %endif   
+   %if o.grupos_fac:
+    <totalConImpuestos>  
+     %for grupo_code in o.grupos_fac.keys():
+      %for tax_code in o.grupos_fac[grupo_code].keys():
+       <totalImpuesto>
+        <codigo>${grupo_code}</codigo>  
+        <codigoPorcentaje>${tax_code}</codigoPorcentaje>  
+        <baseImponible>${"{0:.2f}".format(o.grupos_fac[grupo_code][tax_code]['base'])}</baseImponible>
+        <tarifa>${int(o.grupos_fac[grupo_code][tax_code]['percent']*100)}</tarifa>
+        <valor>${"{0:.2f}".format(o.grupos_fac[grupo_code][tax_code]['base'] * o.grupos_fac[grupo_code][tax_code]['percent'])}</valor>  
+        </totalImpuesto>
+      %endfor
+     %endfor
+    </totalConImpuestos>
+   %endif
+   <propina>0.00</propina>
+   <importeTotal>${"{0:.2f}".format(o.amount_total)}</importeTotal>
+   %if o.company_id.currency_id.name == 'USD':
+    <moneda>DOLAR</moneda>
+   %else:
+    <moneda>${o.company_id.currency_id.name}</moneda>
+   %endif
+   %if len(o.payment_type_ids) != 0:
+      <pagos>
+          %for pago in o.payment_type_ids:
+            <pago>
+                <formaPago>${pago.payment_type_id.code}</formaPago>
+                <total>${"{0:.2f}".format(pago.amount)}</total>
+            </pago> 
+          %endfor
+      </pagos>
+   %endif
+  </infoLiquidacionCompra>
+  <detalles>
+   %for line in o.invoice_line:
+    <detalle>
+     <codigoPrincipal>${line.product_id.ean13 or 'N/A'}</codigoPrincipal>   
+     <descripcion>${line.name}</descripcion>
+     <cantidad>${"{0:.2f}".format(line.quantity)}</cantidad>
+     %if line.discount:
+         %if round(line.discount,2) == 100:
+            <precioUnitario>${"{0:.2f}".format(line.real_price_unit*line.quantity)}</precioUnitario>
+            <descuento>${"{0:.2f}".format((line.quantity * line.real_price_unit)-(line.price_subtotal))}</descuento>
+         %else:
+            <precioUnitario>${"{0:.2f}".format(min(line.price_unit,((1/(1-line.discount/100))*line.price_subtotal)/line.quantity))}</precioUnitario>
+            <descuento>${"{0:.2f}".format(line.discount_line)}</descuento>
+         %endif
+     %else:
+         <precioUnitario>${"{0:.2f}".format(line.price_subtotal/line.quantity)}</precioUnitario>
+         <descuento>0.00</descuento>
+     %endif
+     <precioTotalSinImpuesto>${"{0:.2f}".format(line.price_subtotal)}</precioTotalSinImpuesto>     
+     %if line.grupos_line:
+      <impuestos>
+       %for grupo_code in line.grupos_line.keys():
+        %for tax_code in line.grupos_line[grupo_code].keys():
+         <impuesto>
+          <codigo>${grupo_code}</codigo>  
+          <codigoPorcentaje>${tax_code}</codigoPorcentaje>            
+          <tarifa>${int(line.grupos_line[grupo_code][tax_code]['percent']*100)}</tarifa>
+          <baseImponible>${"{0:.2f}".format(line.grupos_line[grupo_code][tax_code]['base'])}</baseImponible>
+          <valor>${"{0:.2f}".format(line.grupos_line[grupo_code][tax_code]['base'] * line.grupos_line[grupo_code][tax_code]['percent'])}</valor>    
+         </impuesto>
+        %endfor
+       %endfor   
+      </impuestos>
+     %endif
+    </detalle>
+   %endfor
+  </detalles>
+  %if o.comment:
+   <infoAdicional>
+    %if '\n' in o.comment:
+     %for n in range(len(o.comment.strip().split('\n'))):
+      %if o.comment.split('\n')[n]:
+            <campoAdicional nombre="campo${n}">${o.comment.split('\n')[n]}</campoAdicional>
+         %endif
+     %endfor
+    %else:
+        %if o.comment:
+         <campoAdicional nombre="campoadicional">${o.comment}</campoAdicional>
+        %endif
+    %endif
+   </infoAdicional>
+  %endif
+ </liquidacionCompra>
+%endfor]]></field>
+      </record>
+
+   </data>
+</openerp>

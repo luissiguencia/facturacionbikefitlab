@@ -1,0 +1,9 @@
+<odoo>
+    <record model="ir.sequence" id="evoucher_general_sequence">
+        <field name="name">Código Numérico Comprobantes</field>
+        <field name="code">evoucher.numeric.code</field>
+        <field name="padding">8</field>
+        <field name="number_increment">1</field>
+        <field name="number_next">1</field>
+    </record>
+</odoo>

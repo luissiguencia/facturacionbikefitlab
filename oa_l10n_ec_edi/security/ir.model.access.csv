@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_evoucher_base_environment,oa.evoucher.environment,model_oa_evoucher_environment,base.group_user,1,1,1,1
+access_evoucher_base_issuer,oa.evoucher.issuer,model_oa_evoucher_issuer,base.group_user,1,1,1,1
+access_evoucher_base_cert,oa.evoucher.issuer.certificate,model_oa_evoucher_issuer_certificate,base.group_user,1,1,1,1

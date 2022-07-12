@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_company_form_view_inh" model="ir.ui.view">
+        <field name="name">res.company.form.inh</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='general_info']" position="after">
+                <page id="sri_config" string="Internal Rents Service">
+                    <notebook>
+                        <page id="sri_basic" string="Basic Configuration">
+                            <group>
+                                <field name="mandatory_accounting" />
+                                <field name="special_tax_payer_code" />
+                                <field name="retention_agent" />
+                            </group>
+                            <notebook>
+                                <page string="Branchoffices">
+                                    <field name="branch_ids" string="Branch Ids"/>
+                                </page>
+                            </notebook>
+                        </page>
+                    </notebook>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

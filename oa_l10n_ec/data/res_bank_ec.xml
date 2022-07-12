@@ -1,0 +1,2299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_1" model="res.bank">
+      <field name="name">ACCIONES VALORES CASA DE VALORES S.A. ACCIVAL</field>
+      <field name="bic">9913</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_2" model="res.bank">
+      <field name="name">ACTIVA ASES.E INTERMED.VALORES ACTIVALORES CASA DE</field>
+      <field name="bic">9938</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_3" model="res.bank">
+      <field name="name">ALBION CASA DE VALORES S.A.</field>
+      <field name="bic">9932</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_4" model="res.bank">
+      <field name="name">ANALYTICA SECURTIES C.A. CASA DE VALORES</field>
+      <field name="bic">9916</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_5" model="res.bank">
+      <field name="name">BANCO AMAZONAS</field>
+      <field name="bic">34</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_6" model="res.bank">
+      <field name="name">BANCO BOLIVARIANO</field>
+      <field name="bic">37</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_7" model="res.bank">
+      <field name="name">BANCO CAPITAL</field>
+      <field name="bic">61</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_8" model="res.bank">
+      <field name="name">BANCO CENTRAL DEL ECUADOR</field>
+      <field name="bic">1</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_9" model="res.bank">
+      <field name="name">BANCO CITY BANK</field>
+      <field name="bic">24</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_10" model="res.bank">
+      <field name="name">BANCO COMERCIAL DE MANABI</field>
+      <field name="bic">39</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_11" model="res.bank">
+      <field name="name">BANCO COOPNACIONAL SA</field>
+      <field name="bic">517</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_12" model="res.bank">
+      <field name="name">BANCO D MIRO SA</field>
+      <field name="bic">500</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_13" model="res.bank">
+      <field name="name">BANCO DE GUAYAQUIL S.A</field>
+      <field name="bic">17</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_14" model="res.bank">
+      <field name="name">BANCO DE LOJA</field>
+      <field name="bic">29</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_15" model="res.bank">
+      <field name="name">BANCO DEL AUSTRO</field>
+      <field name="bic">35</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_16" model="res.bank">
+      <field name="name">BANCO DEL INSTITUTO ECUATORIANO DE SEGURIDAD SOCIAL</field>
+      <field name="bic">461</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_17" model="res.bank">
+      <field name="name">BANCO DEL LITORAL S.A.</field>
+      <field name="bic">43</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_18" model="res.bank">
+      <field name="name">BANCO DEL PACIFICO</field>
+      <field name="bic">30</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_19" model="res.bank">
+      <field name="name">BANCO DELBANK S.A.</field>
+      <field name="bic">201</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_20" model="res.bank">
+      <field name="name">BANCO DESARROLLO DE LOS PUEBLOS S.A.</field>
+      <field name="bic">65</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_21" model="res.bank">
+      <field name="name">BANCO ECUATORIANO DE LA VIVIENDA</field>
+      <field name="bic">202</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_22" model="res.bank">
+      <field name="name">BANCO GENERAL RUMINAHUI S.A.</field>
+      <field name="bic">42</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_23" model="res.bank">
+      <field name="name">BANCO INTERNACIONAL</field>
+      <field name="bic">32</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_24" model="res.bank">
+      <field name="name">BANCO MACHALA</field>
+      <field name="bic">25</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_25" model="res.bank">
+      <field name="name">BANCO PARA LA ASISTENCIA COMUNITARIA FINCA S.A.</field>
+      <field name="bic">323</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_26" model="res.bank">
+      <field name="name">BANCO PICHINCHA C.A.</field>
+      <field name="bic">10</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_27" model="res.bank">
+      <field name="name">BANCO PROCREDIT S.A.</field>
+      <field name="bic">60</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_28" model="res.bank">
+      <field name="name">BANCO SOLIDARIO</field>
+      <field name="bic">59</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_29" model="res.bank">
+      <field name="name">BANECUADOR B.P.</field>
+      <field name="bic">66</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_30" model="res.bank">
+      <field name="name">C DE A Y C EMPLEAD BANCAR DEL ORO LTDA</field>
+      <field name="bic">578</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_31" model="res.bank">
+      <field name="name">C. A. Y C. INTERCULT. TARPUK RUNA LTDA.</field>
+      <field name="bic">572</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_32" model="res.bank">
+      <field name="name">C. DE A Y C EDUCAD. DE ZAMORA CHINCHIPE</field>
+      <field name="bic">574</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_33" model="res.bank">
+      <field name="name">C. DE A Y C. EDUCADORES DE EL ORO LTD</field>
+      <field name="bic">577</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_34" model="res.bank">
+      <field name="name">C. DE A Y C. SAN MIGUEL DE PALLATANGA</field>
+      <field name="bic">582</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_35" model="res.bank">
+      <field name="name">C. DE A. Y C COOPAC AUSTRO LTDA (MIESS)</field>
+      <field name="bic">569</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_36" model="res.bank">
+      <field name="name">C. DE A. Y C. SAN MARTIN DE TISALEO LTDA.</field>
+      <field name="bic">580</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_37" model="res.bank">
+      <field name="name">C. DE AH. Y CREDITO LAS LAGUNAS (MIESS)</field>
+      <field name="bic">575</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_38" model="res.bank">
+      <field name="name">C.PEQ.EMPRESA DE PASTAZA</field>
+      <field name="bic">204</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_39" model="res.bank">
+      <field name="name">CACPECO LTDA</field>
+      <field name="bic">203</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_40" model="res.bank">
+      <field name="name">CAJA ECUAESPANA</field>
+      <field name="bic">406</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_41" model="res.bank">
+      <field name="name">CASA DE VALORES ADVFIN S.A.</field>
+      <field name="bic">9935</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_42" model="res.bank">
+      <field name="name">CASA DE VALORES BANRIO S.A.</field>
+      <field name="bic">9931</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_43" model="res.bank">
+      <field name="name">CASA DE VALORES DEL PACIFICO (VALPACIFICO) S.A.</field>
+      <field name="bic">9934</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_44" model="res.bank">
+      <field name="name">CASA DE VALORES VALUE S.A.</field>
+      <field name="bic">9921</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_45" model="res.bank">
+      <field name="name">CCOP A Y C DE APECAP CAC APECAP</field>
+      <field name="bic">734</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_46" model="res.bank">
+      <field name="name">CITADEL CASA DE VALORES S.A.</field>
+      <field name="bic">9939</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_47" model="res.bank">
+      <field name="name">COAC 23 DE ENERO</field>
+      <field name="bic">9959</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_48" model="res.bank">
+      <field name="name">COAC A Y C EDUCADORES DE BOLIVAR</field>
+      <field name="bic">717</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_49" model="res.bank">
+      <field name="name">COAC A Y C ESPERANZA DE VALLE DE LA VIRGEN LTDA.</field>
+      <field name="bic">708</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_50" model="res.bank">
+      <field name="name">COAC A Y C ZONA DE CAPITAL CORCIMOL</field>
+      <field name="bic">709</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_51" model="res.bank">
+      <field name="name">COAC ACHIK INTI LTDA</field>
+      <field name="bic">9950</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_52" model="res.bank">
+      <field name="name">COAC CADECOM MACARA</field>
+      <field name="bic">729</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_53" model="res.bank">
+      <field name="name">COAC COOPYMEC MACARA</field>
+      <field name="bic">728</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_54" model="res.bank">
+      <field name="name">COAC CUNA DE LA NACIONALIDAD LTDA.</field>
+      <field name="bic">259</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_55" model="res.bank">
+      <field name="name">COAC DE LOS PROFESORES EMPLEADOS Y TRABAJADORES DE</field>
+      <field name="bic">696</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_56" model="res.bank">
+      <field name="name">COAC DEL SIND CHOF PROF VIRGEN DEL CISNE</field>
+      <field name="bic">9961</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_57" model="res.bank">
+      <field name="name">COAC DEL SINDICATO DE CHOFERES PROFESIONALES DEL A</field>
+      <field name="bic">269</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_58" model="res.bank">
+      <field name="name">COAC EL MIGRANTE SOLIDARIO</field>
+      <field name="bic">9951</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_59" model="res.bank">
+      <field name="name">COAC LOJA INTERNACIONAL LTDA.</field>
+      <field name="bic">9958</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_60" model="res.bank">
+      <field name="name">COAC OBRAS PUBLICAS FISCALES DE LOJA Y ZAMORA</field>
+      <field name="bic">9960</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_61" model="res.bank">
+      <field name="name">COAC SAN MIGUEL DE CHIRIJOS LTDA</field>
+      <field name="bic">9962</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_62" model="res.bank">
+      <field name="name">COAC SAN MIGUEL LTDA.</field>
+      <field name="bic">718</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_63" model="res.bank">
+      <field name="name">COAC SINDICATO DE CHOFERES PROFESIONALES DE YANTZA</field>
+      <field name="bic">9971</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_64" model="res.bank">
+      <field name="name">COAC TIENDA DE DINERO LTDA.</field>
+      <field name="bic">370</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_65" model="res.bank">
+      <field name="name">COAC. SANTA ROSA DE SAN CARLOS LTDA.</field>
+      <field name="bic">697</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_66" model="res.bank">
+      <field name="name">COOP A Y C 20 FEBRERO LTDA</field>
+      <field name="bic">503</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_67" model="res.bank">
+      <field name="name">COOP A Y C CARROCEROS DE TUNGURAHUA</field>
+      <field name="bic">480</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_68" model="res.bank">
+      <field name="name">COOP A Y C ECUAFUTURO LTDA</field>
+      <field name="bic">476</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_69" model="res.bank">
+      <field name="name">COOP A Y C ESC SUP POLITEC AGROP DE MANABI MANUEL</field>
+      <field name="bic">519</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_70" model="res.bank">
+      <field name="name">COOP A Y C FOCLA</field>
+      <field name="bic">498</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_71" model="res.bank">
+      <field name="name">COOP A Y C NUEVOS HORIZONTES EL ORO LTDA</field>
+      <field name="bic">516</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_72" model="res.bank">
+      <field name="name">COOP A Y C PROFESIONALES DEL VOLANTE UNION LTDA</field>
+      <field name="bic">491</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_73" model="res.bank">
+      <field name="name">COOP A Y C VISION DE LOS ANDES VISANDES</field>
+      <field name="bic">721</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_74" model="res.bank">
+      <field name="name">COOP AC LAS NAVES</field>
+      <field name="bic">9952</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_75" model="res.bank">
+      <field name="name">COOP AHORRO Y CREDITO CAMARA COMERCIO DE AMBATO</field>
+      <field name="bic">411</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_76" model="res.bank">
+      <field name="name">COOP AHORRO Y CREDITO CARIAMANGA LTDA</field>
+      <field name="bic">422</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_77" model="res.bank">
+      <field name="name">COOP AHORRO Y CREDITO CONSTRC COMERCIO Y PRODUC</field>
+      <field name="bic">228</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_78" model="res.bank">
+      <field name="name">COOP AHORRO Y CREDITO DE LA PEQ EMP CACPE YANZATZA</field>
+      <field name="bic">404</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_79" model="res.bank">
+      <field name="name">COOP AHORRO Y CREDITO FUNDESARROLLO</field>
+      <field name="bic">405</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_80" model="res.bank">
+      <field name="name">COOP AHORRO Y CREDITO MI TIERRA</field>
+      <field name="bic">403</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_81" model="res.bank">
+      <field name="name">COOP AHORRO Y CREDITO MUSHUC RUNA LTDA</field>
+      <field name="bic">412</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_82" model="res.bank">
+      <field name="name">COOP AHORRO Y CREDITO PADRE JULIAN LORENTE LTDA</field>
+      <field name="bic">421</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_83" model="res.bank">
+      <field name="name">COOP CACIQUE GURITAVE</field>
+      <field name="bic">546</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_84" model="res.bank">
+      <field name="name">COOP DE A Y C 16 DE JUNIO</field>
+      <field name="bic">518</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_85" model="res.bank">
+      <field name="name">COOP DE A Y C 23 DE MAYO LTDA</field>
+      <field name="bic">463</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_86" model="res.bank">
+      <field name="name">COOP DE A Y C ACCION TUNGURAHUA LTDA</field>
+      <field name="bic">510</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_87" model="res.bank">
+      <field name="name">COOP DE A Y C BANOS LTDA</field>
+      <field name="bic">472</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_88" model="res.bank">
+      <field name="name">COOP DE A Y C CASAG LTDA</field>
+      <field name="bic">499</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_89" model="res.bank">
+      <field name="name">COOP DE A Y C CATAMAYO LTDA</field>
+      <field name="bic">514</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_90" model="res.bank">
+      <field name="name">COOP DE A Y C COCA LTDA</field>
+      <field name="bic">464</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_91" model="res.bank">
+      <field name="name">COOP DE A Y C CREDIAMIGO LTDA LOJA MIES</field>
+      <field name="bic">489</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_92" model="res.bank">
+      <field name="name">COOP DE A Y C CREDISUR LTDA</field>
+      <field name="bic">468</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_93" model="res.bank">
+      <field name="name">COOP DE A Y C DE LA PEQ EMPRESA CACPE MACARA</field>
+      <field name="bic">515</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_94" model="res.bank">
+      <field name="name">COOP DE A Y C DE SERV PUBL DEL MIN EDUCACION Y CUL</field>
+      <field name="bic">462</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_95" model="res.bank">
+      <field name="name">COOP DE A Y C DEL COL. FISC. VICENTE ROCAFUERTE</field>
+      <field name="bic">504</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_96" model="res.bank">
+      <field name="name">COOP DE A Y C EDUCADORES DE PASTAZA LTDA</field>
+      <field name="bic">435</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_97" model="res.bank">
+      <field name="name">COOP DE A Y C ESCENCIA INDIGENA LTDA</field>
+      <field name="bic">512</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_98" model="res.bank">
+      <field name="name">COOP DE A Y C FENIX</field>
+      <field name="bic">590</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_99" model="res.bank">
+      <field name="name">COOP DE A Y C FINANCIERA INDIGENA LTDA</field>
+      <field name="bic">502</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_100" model="res.bank">
+      <field name="name">COOP DE A Y C FUTURO Y PROGRESO DE GALAPAGOS LTDA</field>
+      <field name="bic">493</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_101" model="res.bank">
+      <field name="name">COOP DE A Y C GENERAL RUMINAHUI</field>
+      <field name="bic">501</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_102" model="res.bank">
+      <field name="name">COOP DE A Y C GONZANAMA MIES</field>
+      <field name="bic">486</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_103" model="res.bank">
+      <field name="name">COOP DE A Y C INKA KIPU LTDA</field>
+      <field name="bic">509</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_104" model="res.bank">
+      <field name="name">COOP DE A Y C JADAN LTDA (MIES)</field>
+      <field name="bic">505</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_105" model="res.bank">
+      <field name="name">COOP DE A Y C LUCHA CAMPESINA LTDA</field>
+      <field name="bic">495</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_106" model="res.bank">
+      <field name="name">COOP DE A Y C MAQUITA CUSHUN LTDA</field>
+      <field name="bic">477</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_107" model="res.bank">
+      <field name="name">COOP DE A Y C MAQUITA CUSHUNCHIC LTDA</field>
+      <field name="bic">497</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_108" model="res.bank">
+      <field name="name">COOP DE A Y C PIJAL</field>
+      <field name="bic">511</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_109" model="res.bank">
+      <field name="name">COOP DE A Y C SANTA ROSA DE PAUTAN LTDA</field>
+      <field name="bic">483</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_110" model="res.bank">
+      <field name="name">COOP DE A Y C SIERRA CENTRO LTDA</field>
+      <field name="bic">485</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_111" model="res.bank">
+      <field name="name">COOP DE A Y C SINCHI RUNA LTDA</field>
+      <field name="bic">482</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_112" model="res.bank">
+      <field name="name">COOP DE A Y C SUMAC LLACTA LTDA</field>
+      <field name="bic">494</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_113" model="res.bank">
+      <field name="name">COOP DE A Y C UNION MERCEDARIA LTDA</field>
+      <field name="bic">513</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_114" model="res.bank">
+      <field name="name">COOP DE A Y C VALLES DEL LIRIO</field>
+      <field name="bic">478</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_115" model="res.bank">
+      <field name="name">COOP DE A Y C VENCEDORES DE TUNGURAHUA</field>
+      <field name="bic">475</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_116" model="res.bank">
+      <field name="name">COOP DE A. Y C. 22 DE JUNIO-ORIANGA</field>
+      <field name="bic">730</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_117" model="res.bank">
+      <field name="name">COOP DE A. Y C. CAMARA DE COMERCIO JOYA DE LOS SAC</field>
+      <field name="bic">678</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_118" model="res.bank">
+      <field name="name">COOP DE A. Y C. CAMINO DE LUZ LTDA.</field>
+      <field name="bic">716</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_119" model="res.bank">
+      <field name="name">COOP DE A. Y C. CORPORACION CENTRO LTDA.</field>
+      <field name="bic">240</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_120" model="res.bank">
+      <field name="name">COOP DE A. Y C. CRECER WINARI LTDA.</field>
+      <field name="bic">304</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_121" model="res.bank">
+      <field name="name">COOP DE A. Y C. EDUCADORES DE LOJA</field>
+      <field name="bic">725</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_122" model="res.bank">
+      <field name="name">COOP DE A. Y C. EDUCADORES DEL AZUAY</field>
+      <field name="bic">682</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_123" model="res.bank">
+      <field name="name">COOP DE A. Y C. HERMES GAIBOR VERDESOTO</field>
+      <field name="bic">689</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_124" model="res.bank">
+      <field name="name">COOP DE A. Y C. INDIGENA SAC LATACUNGA LTDA</field>
+      <field name="bic">726</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_125" model="res.bank">
+      <field name="name">COOP DE A. Y C. MUSHUK YUYAY LTDA</field>
+      <field name="bic">699</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_126" model="res.bank">
+      <field name="name">COOP DE A. Y C. PANAMERICANA LTDA</field>
+      <field name="bic">692</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_127" model="res.bank">
+      <field name="name">COOP DE A. Y C. PUSHAK RUNA HOMBRE LIDER</field>
+      <field name="bic">9944</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_128" model="res.bank">
+      <field name="name">COOP DE A. Y C. SAN JUAN DE COTOGCHOA</field>
+      <field name="bic">248</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_129" model="res.bank">
+      <field name="name">COOP DE A. Y C. SINCHI CODEFIS</field>
+      <field name="bic">714</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_130" model="res.bank">
+      <field name="name">COOP DE A. Y C. SISAY KANARI</field>
+      <field name="bic">687</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_131" model="res.bank">
+      <field name="name">COOP DE A.Y C. CADECOG GONZANAMA</field>
+      <field name="bic">727</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_132" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO 27 DE ABRIL LOJA</field>
+      <field name="bic">488</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_133" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO AGRICOLA JUNIN LTDA</field>
+      <field name="bic">424</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_134" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO AMBATO LTDA</field>
+      <field name="bic">414</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_135" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO ARTESANOS LTDA</field>
+      <field name="bic">417</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_136" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO CAC-CICA MIES</field>
+      <field name="bic">473</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_137" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO CACPE CELICA</field>
+      <field name="bic">492</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_138" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO DORADO LTDA</field>
+      <field name="bic">415</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_139" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO ERCO LTDA</field>
+      <field name="bic">410</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_140" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO FASAYNAN LTDA</field>
+      <field name="bic">526</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_141" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO FERNANDO DAQUILEMA</field>
+      <field name="bic">429</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_142" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO FORTUNA MIES</field>
+      <field name="bic">490</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_143" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO HUAICANA LTDA</field>
+      <field name="bic">467</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_144" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO HUAQUILLAS LTDA</field>
+      <field name="bic">471</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_145" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO HUAYCO PUNGO LTDA</field>
+      <field name="bic">419</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_146" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO LA MERCED</field>
+      <field name="bic">2557</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_147" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO MARCABELI LTDA</field>
+      <field name="bic">423</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_148" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO NUESTROS ABUELOS LTDA</field>
+      <field name="bic">416</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_149" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO NUEVA ESPERANZA</field>
+      <field name="bic">427</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_150" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO NUEVA HUANCAVILCA</field>
+      <field name="bic">408</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_151" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO PILAHUIN TIO LTDA</field>
+      <field name="bic">465</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_152" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO PUERTO LOPEZ LTDA</field>
+      <field name="bic">425</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_153" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO QUILANGA LTDA</field>
+      <field name="bic">487</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_154" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO SAN JORGE LTDA</field>
+      <field name="bic">428</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_155" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO SAN MIGUEL DE SIGCHOS</field>
+      <field name="bic">484</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_156" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO SANTA ANA CUENCA</field>
+      <field name="bic">267</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_157" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO SANTA ANITA LTDA</field>
+      <field name="bic">418</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_158" model="res.bank">
+      <field name="name">COOP DE AHORRO Y CREDITO SIMIATUG LTDA</field>
+      <field name="bic">481</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_159" model="res.bank">
+      <field name="name">COOP ESFUERZO UNIDO PARA EL DESARR DEL CHILCO</field>
+      <field name="bic">479</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_160" model="res.bank">
+      <field name="name">COOP MANUEL ESTEBAN GODOY ORTEGA LTDA COOPMEGO</field>
+      <field name="bic">420</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_161" model="res.bank">
+      <field name="name">COOP SOLIDARIDAD Y PROGRESO ORIENTAL</field>
+      <field name="bic">547</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_162" model="res.bank">
+      <field name="name">COOP. A Y C CAMARA DE COMERCIO CANTON -EL CARMEN L</field>
+      <field name="bic">365</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_163" model="res.bank">
+      <field name="name">COOP. A. Y C. CAMARA DE COMERCIO DE PINDAL CADECOP</field>
+      <field name="bic">456</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_164" model="res.bank">
+      <field name="name">COOP. A. Y C. DE INDIGENAS CHUCHUQUI LTDA</field>
+      <field name="bic">9954</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_165" model="res.bank">
+      <field name="name">COOP. A. Y C. DE LA PEQ. EMP. CACPE ZAMORA LTDA</field>
+      <field name="bic">450</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_166" model="res.bank">
+      <field name="name">COOP. A.YC.SAGRADA FAMILIA SOLIDARIDAD</field>
+      <field name="bic">732</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_167" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO 15 DE ABRIL LTDA</field>
+      <field name="bic">70</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_168" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO 23 DE JULIO</field>
+      <field name="bic">205</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_169" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO 29 DE OCTUBRE</field>
+      <field name="bic">206</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_170" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO 9 DE OCTUBRE LTDA</field>
+      <field name="bic">325</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_171" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO AGRARIA MUSHUK KAWSAY LTDA.</field>
+      <field name="bic">356</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_172" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO ALIANZA MINAS LTDA.</field>
+      <field name="bic">278</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_173" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO ANDALUCIA</field>
+      <field name="bic">207</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_174" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO CACPE MANABI</field>
+      <field name="bic">368</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_175" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO CAMARA DE COMERCIO DEL CANT</field>
+      <field name="bic">362</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_176" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO CAMARA DE COMERCIO INDIGENA</field>
+      <field name="bic">375</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_177" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO COTOCOLLAO</field>
+      <field name="bic">208</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_178" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO D LA PEQ EMPR CACPE BIBLIAN</field>
+      <field name="bic">327</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_179" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO DE LA PEQUENA EMPRESA GUALA</field>
+      <field name="bic">277</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_180" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO EL SAGRARIO</field>
+      <field name="bic">210</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_181" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO FOCAZSUM LTDA.</field>
+      <field name="bic">9955</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_182" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO GUARANDA LTDA</field>
+      <field name="bic">211</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_183" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO JUAN DE SALINAS LTDA.</field>
+      <field name="bic">270</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_184" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO LA LIBERTAD LTDA</field>
+      <field name="bic">258</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_185" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO MALCHINGUI LTDA.</field>
+      <field name="bic">273</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_186" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO MANANTIAL DE ORO LTDA.</field>
+      <field name="bic">8000</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_187" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO MANUEL</field>
+      <field name="bic">214</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_188" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO MASCOOP</field>
+      <field name="bic">726</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_189" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO METROPOLIS LTDA.</field>
+      <field name="bic">312</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_190" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO NUEVA JERUSALEN</field>
+      <field name="bic">272</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_191" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO OSCUS</field>
+      <field name="bic">216</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_192" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO PABLO MUNOZ VEGA</field>
+      <field name="bic">217</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_193" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO PROGRESO</field>
+      <field name="bic">218</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_194" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO PUELLARO LTDA</field>
+      <field name="bic">271</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_195" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO QUEVEDO LTDA.</field>
+      <field name="bic">9963</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_196" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO RIOBAMBA</field>
+      <field name="bic">219</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_197" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO SAN ANTONIO LTDA.</field>
+      <field name="bic">317</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_198" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO SAN FRANCISCO</field>
+      <field name="bic">220</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_199" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO SAN GABRIEL LTDA.</field>
+      <field name="bic">328</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_200" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO SAN JOSE LTDA</field>
+      <field name="bic">329</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_201" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO SAN MIGUEL DE LOS BANCOS</field>
+      <field name="bic">330</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_202" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO SEMILLA DEL PROGRESO LTDA</field>
+      <field name="bic">332</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_203" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO SENOR DE GIRON</field>
+      <field name="bic">285</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_204" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO TENA LTDA.</field>
+      <field name="bic">276</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_205" model="res.bank">
+      <field name="name">COOP. AHORRO Y CREDITO TULCAN</field>
+      <field name="bic">222</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_206" model="res.bank">
+      <field name="name">COOP. AHORRO. Y CREDI. MUJERES UNIDAS TANTANAKUSHK</field>
+      <field name="bic">333</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_207" model="res.bank">
+      <field name="name">COOP. CALCETA LTDA</field>
+      <field name="bic">324</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_208" model="res.bank">
+      <field name="name">COOP. CREDITO Y AHORRO SAN FRANCISCO DE ASIS</field>
+      <field name="bic">252</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_209" model="res.bank">
+      <field name="name">COOP. DE A Y C DE LA PEQUENA EMPRESA DE PALORA</field>
+      <field name="bic">597</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_210" model="res.bank">
+      <field name="name">COOP. DE A Y C SAN CARLOS LTDA.</field>
+      <field name="bic">707</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_211" model="res.bank">
+      <field name="name">COOP. DE A Y C. CAMARA DE COMERCIO RIOBAMBA</field>
+      <field name="bic">385</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_212" model="res.bank">
+      <field name="name">COOP. DE A Y C. ESPERANZA Y PROGRESO DEL VALLE</field>
+      <field name="bic">245</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_213" model="res.bank">
+      <field name="name">COOP. DE A Y C. LUZ DEL VALLE</field>
+      <field name="bic">244</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_214" model="res.bank">
+      <field name="name">COOP. DE A Y C. MARIA AUXILIADORA DE QUIROGA LTDA</field>
+      <field name="bic">321</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_215" model="res.bank">
+      <field name="name">COOP. DE A Y C. SERVIDORES MUNICIPALES DE CUENCA</field>
+      <field name="bic">626</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_216" model="res.bank">
+      <field name="name">COOP. DE A. Y C. 13 DE ABRIL LTDA</field>
+      <field name="bic">609</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_217" model="res.bank">
+      <field name="name">COOP. DE A. Y C. 15 DE AGOSTO LTDA.</field>
+      <field name="bic">9945</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_218" model="res.bank">
+      <field name="name">COOP. DE A. Y C. 16 DE JULIO LTDA</field>
+      <field name="bic">9907</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_219" model="res.bank">
+      <field name="name">COOP. DE A. Y C. 17 DE MARZO LTDA</field>
+      <field name="bic">9903</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_220" model="res.bank">
+      <field name="name">COOP. DE A. Y C. 18 DE NOVIEMBRE</field>
+      <field name="bic">680</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_221" model="res.bank">
+      <field name="name">COOP. DE A. Y C. 21 DE NOVIEMBRE LTDA.</field>
+      <field name="bic">300</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_222" model="res.bank">
+      <field name="name">COOP. DE A. Y C. 29 DE AGOSTO</field>
+      <field name="bic">634</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_223" model="res.bank">
+      <field name="name">COOP. DE A. Y C. 5 DE MAYO DE SANTA MARTHA DE CUBA</field>
+      <field name="bic">9972</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_224" model="res.bank">
+      <field name="name">COOP. DE A. Y C. AFROECUATORIANA DE LA PEQ. EMP. L</field>
+      <field name="bic">315</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_225" model="res.bank">
+      <field name="name">COOP. DE A. Y C. ALIANZA SOCIAL ECU. ALSEC</field>
+      <field name="bic">701</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_226" model="res.bank">
+      <field name="name">COOP. DE A. Y C. ALLI TARPUC LTDA.</field>
+      <field name="bic">581</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_227" model="res.bank">
+      <field name="name">COOP. DE A. Y C. ALLI TARPUK LTDA</field>
+      <field name="bic">9906</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_228" model="res.bank">
+      <field name="name">COOP. DE A. Y C. ANTORCHA LTDA.</field>
+      <field name="bic">359</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_229" model="res.bank">
+      <field name="name">COOP. DE A. Y C. BANOS DE AGUA SANTA LTDA.</field>
+      <field name="bic">305</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_230" model="res.bank">
+      <field name="name">COOP. DE A. Y C. BASHALAN LTDA.</field>
+      <field name="bic">386</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_231" model="res.bank">
+      <field name="name">COOP. DE A. Y C. BOLA AMARILLA</field>
+      <field name="bic">720</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_232" model="res.bank">
+      <field name="name">COOP. DE A. Y C. CAMARA DE COMERCIO DE LA MANA</field>
+      <field name="bic">724</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_233" model="res.bank">
+      <field name="name">COOP. DE A. Y C. CAMARA DE COMERCIO SANTO DOMINGO</field>
+      <field name="bic">387</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_234" model="res.bank">
+      <field name="name">COOP. DE A. Y C. CATAR LTDA</field>
+      <field name="bic">9904</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_235" model="res.bank">
+      <field name="name">COOP. DE A. Y C. CERRADA MANUELA LEON</field>
+      <field name="bic">9969</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_236" model="res.bank">
+      <field name="name">COOP. DE A. Y C. CHIBULEO LTDA.</field>
+      <field name="bic">604</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_237" model="res.bank">
+      <field name="name">COOP. DE A. Y C. CHOCO TUNGURAHUA RUNA LTDA</field>
+      <field name="bic">246</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_238" model="res.bank">
+      <field name="name">COOP. DE A. Y C. CONSTRUCTOR DEL DESARROLLO SOLIDA</field>
+      <field name="bic">698</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_239" model="res.bank">
+      <field name="name">COOP. DE A. Y C. COOPARTAMOS LTDA</field>
+      <field name="bic">247</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_240" model="res.bank">
+      <field name="name">COOP. DE A. Y C. COOPINDIGENA LTDA.</field>
+      <field name="bic">613</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_241" model="res.bank">
+      <field name="name">COOP. DE A. Y C. COOPTOPAXI LTDA.</field>
+      <field name="bic">338</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_242" model="res.bank">
+      <field name="name">COOP. DE A. Y C. CORDILLERA DE LOS ANDES LTDA.</field>
+      <field name="bic">242</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_243" model="res.bank">
+      <field name="name">COOP. DE A. Y C. CORP. ORG. CAMPESINAS DE QUISAPIN</field>
+      <field name="bic">302</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_244" model="res.bank">
+      <field name="name">COOP. DE A. Y C. CREDI YA LTDA</field>
+      <field name="bic">684</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_245" model="res.bank">
+      <field name="name">COOP. DE A. Y C. CREDIL LTDA.</field>
+      <field name="bic">337</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_246" model="res.bank">
+      <field name="name">COOP. DE A. Y C. CREDISOCIO</field>
+      <field name="bic">641</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_247" model="res.bank">
+      <field name="name">COOP. DE A. Y C. DE ACCION POPULAR</field>
+      <field name="bic">9905</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_248" model="res.bank">
+      <field name="name">COOP. DE A. Y C. DE IMBABURA AMAZONAS</field>
+      <field name="bic">9953</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_249" model="res.bank">
+      <field name="name">COOP. DE A. Y C. DEL EMIGRANTE ECUATORIANO Y SU FA</field>
+      <field name="bic">257</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_250" model="res.bank">
+      <field name="name">COOP. DE A. Y C. DEL SINDICATO DE CHOFERES PROFESI</field>
+      <field name="bic">354</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_251" model="res.bank">
+      <field name="name">COOP. DE A. Y C. DESARROLLO INTEGRAL LTDA</field>
+      <field name="bic">451</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_252" model="res.bank">
+      <field name="name">COOP. DE A. Y C. EDUCADORES DEL NAPO</field>
+      <field name="bic">705</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_253" model="res.bank">
+      <field name="name">COOP. DE A. Y C. EDUCADORES TULCAN LTDA.</field>
+      <field name="bic">388</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_254" model="res.bank">
+      <field name="name">COOP. DE A. Y C. EL ALTAR LTDA.</field>
+      <field name="bic">9964</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_255" model="res.bank">
+      <field name="name">COOP. DE A. Y C. EL BUEN SEMBRADOR LTDA.</field>
+      <field name="bic">9970</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_256" model="res.bank">
+      <field name="name">COOP. DE A. Y C. EL TESORO PILLARENO</field>
+      <field name="bic">605</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_257" model="res.bank">
+      <field name="name">COOP. DE A. Y C. EL TRANSPORTISTA CACET</field>
+      <field name="bic">621</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_258" model="res.bank">
+      <field name="name">COOP. DE A. Y C. EMPRENDEDORES COOPEMPRENDER LTDA.</field>
+      <field name="bic">249</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_259" model="res.bank">
+      <field name="name">COOP. DE A. Y C. EMPRESAS COMUNITARIAS COOCREDITO</field>
+      <field name="bic">722</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_260" model="res.bank">
+      <field name="name">COOP. DE A. Y C. ESPERANZA DEL FUTURO LTDA.</field>
+      <field name="bic">9902</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_261" model="res.bank">
+      <field name="name">COOP. DE A. Y C. FAMILIA SOLIDARIA</field>
+      <field name="bic">694</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_262" model="res.bank">
+      <field name="name">COOP. DE A. Y C. FOCAP</field>
+      <field name="bic">679</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_263" model="res.bank">
+      <field name="name">COOP. DE A. Y C. FONDO PARA EL DESARROLLO Y LA VID</field>
+      <field name="bic">673</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_264" model="res.bank">
+      <field name="name">COOP. DE A. Y C. FORTALEZA</field>
+      <field name="bic">322</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_265" model="res.bank">
+      <field name="name">COOP. DE A. Y C. FRANDESC LTDA.</field>
+      <field name="bic">383</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_266" model="res.bank">
+      <field name="name">COOP. DE A. Y C. FUERZA DE LOS ANDES</field>
+      <field name="bic">715</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_267" model="res.bank">
+      <field name="name">COOP. DE A. Y C. FUTURO LAMANENSE</field>
+      <field name="bic">342</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_268" model="res.bank">
+      <field name="name">COOP. DE A. Y C. GENESIS LTDA.</field>
+      <field name="bic">320</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_269" model="res.bank">
+      <field name="name">COOP. DE A. Y C. GRAMEEN AMAZONAS</field>
+      <field name="bic">620</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_270" model="res.bank">
+      <field name="name">COOP. DE A. Y C. GUAMOTE LTDA.</field>
+      <field name="bic">379</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_271" model="res.bank">
+      <field name="name">COOP. DE A. Y C. ILINIZA LTDA.</field>
+      <field name="bic">640</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_272" model="res.bank">
+      <field name="name">COOP. DE A. Y C. INDIGENA ALFA Y OMEGA LTDA</field>
+      <field name="bic">600</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_273" model="res.bank">
+      <field name="name">COOP. DE A. Y C. INDIGENA SAC LTDA</field>
+      <field name="bic">683</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_274" model="res.bank">
+      <field name="name">COOP. DE A. Y C. INDIGENA SAC PELILEO</field>
+      <field name="bic">297</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_275" model="res.bank">
+      <field name="name">COOP. DE A. Y C. INDIGENAS GALAPAGOS LTDA.</field>
+      <field name="bic">361</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_276" model="res.bank">
+      <field name="name">COOP. DE A. Y C. INNOVACION ANDINA LTDA.</field>
+      <field name="bic">344</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_277" model="res.bank">
+      <field name="name">COOP. DE A. Y C. INTERCULTURAL TAWANTINSUYU LTDA.</field>
+      <field name="bic">298</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_278" model="res.bank">
+      <field name="name">COOP. DE A. Y C. JUAN PIO DE MORA LTDA</field>
+      <field name="bic">453</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_279" model="res.bank">
+      <field name="name">COOP. DE A. Y C. JUVENTUD UNIDA LTDA.</field>
+      <field name="bic">607</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_280" model="res.bank">
+      <field name="name">COOP. DE A. Y C. KISAPINCHA LTDA.</field>
+      <field name="bic">606</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_281" model="res.bank">
+      <field name="name">COOP. DE A. Y C. KULLKI WASI LTDA.</field>
+      <field name="bic">713</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_282" model="res.bank">
+      <field name="name">COOP. DE A. Y C. LA FLORESTA LTDA.</field>
+      <field name="bic">301</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_283" model="res.bank">
+      <field name="name">COOP. DE A. Y C. LA UNION LTDA.</field>
+      <field name="bic">614</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_284" model="res.bank">
+      <field name="name">COOP. DE A. Y C. LOS CHASQUIS PASTOCALLE LTDA.</field>
+      <field name="bic">612</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_285" model="res.bank">
+      <field name="name">COOP. DE A. Y C. LUIS FELIPE DUCHICELA XXVII</field>
+      <field name="bic">9966</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_286" model="res.bank">
+      <field name="name">COOP. DE A. Y C. MAKITA KUNCHIK</field>
+      <field name="bic">9968</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_287" model="res.bank">
+      <field name="name">COOP. DE A. Y C. MIGRANTES DEL ECUADOR LTDA</field>
+      <field name="bic">9946</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_288" model="res.bank">
+      <field name="name">COOP. DE A. Y C. MULTICULTURAL BANCO INDIGENA LTDA</field>
+      <field name="bic">303</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_289" model="res.bank">
+      <field name="name">COOP. DE A. Y C. MUSHUG CAUSAY LTDA.</field>
+      <field name="bic">633</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_290" model="res.bank">
+      <field name="name">COOP. DE A. Y C. MUSHUK PAKARI LTDA.</field>
+      <field name="bic">339</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_291" model="res.bank">
+      <field name="name">COOP. DE A. Y C. MUSHUK WASI LTDA ( MIES )</field>
+      <field name="bic">346</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_292" model="res.bank">
+      <field name="name">COOP. DE A. Y C. MUSHUK YUYAY - NAPO</field>
+      <field name="bic">703</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_293" model="res.bank">
+      <field name="name">COOP. DE A. Y C. NACIONAL LLANO GRANDE LTDA.</field>
+      <field name="bic">9910</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_294" model="res.bank">
+      <field name="name">COOP. DE A. Y C. NAUPA KAUSAY</field>
+      <field name="bic">733</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_295" model="res.bank">
+      <field name="name">COOP. DE A. Y C. NIZAG LTDA.</field>
+      <field name="bic">9967</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_296" model="res.bank">
+      <field name="name">COOP. DE A. Y C. NUEVA ALIANZA DE CHIMBORAZO LTDA</field>
+      <field name="bic">9965</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_297" model="res.bank">
+      <field name="name">COOP. DE A. Y C. NUEVA LOJA LTDA.</field>
+      <field name="bic">250</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_298" model="res.bank">
+      <field name="name">COOP. DE A. Y C. NUKA LLAKTA LTDA.</field>
+      <field name="bic">384</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_299" model="res.bank">
+      <field name="name">COOP. DE A. Y C. OCIPSA</field>
+      <field name="bic">299</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_300" model="res.bank">
+      <field name="name">COOP. DE A. Y C. PADRE VICENTE PONCE RUBIO</field>
+      <field name="bic">615</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_301" model="res.bank">
+      <field name="name">COOP. DE A. Y C. PARA LA VIVIENDA ORDEN Y SEGURIDA</field>
+      <field name="bic">677</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_302" model="res.bank">
+      <field name="name">COOP. DE A. Y C. PICHNCHA LTDA.</field>
+      <field name="bic">251</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_303" model="res.bank">
+      <field name="name">COOP. DE A. Y C. POLITECNICA LTDA.</field>
+      <field name="bic">9909</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_304" model="res.bank">
+      <field name="name">COOP. DE A. Y C. PRODUACTIVA LTDA</field>
+      <field name="bic">9942</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_305" model="res.bank">
+      <field name="name">COOP. DE A. Y C. PUERTO FRANCISCO DE ORELLANA</field>
+      <field name="bic">243</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_306" model="res.bank">
+      <field name="name">COOP. DE A. Y C. PUJILI LTDA</field>
+      <field name="bic">336</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_307" model="res.bank">
+      <field name="name">COOP. DE A. Y C. RENOVADORA ECU</field>
+      <field name="bic">702</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_308" model="res.bank">
+      <field name="name">COOP. DE A. Y C. REY DAVID LTDA</field>
+      <field name="bic">712</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_309" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SAINT MICHEL LTDA.</field>
+      <field name="bic">727</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_310" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SALASACA</field>
+      <field name="bic">570</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_311" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SALATE LTDA.</field>
+      <field name="bic">9948</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_312" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SALINAS LTDA.</field>
+      <field name="bic">610</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_313" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SALINERITA</field>
+      <field name="bic">719</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_314" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SAN BARTOLOME LTDA</field>
+      <field name="bic">685</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_315" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SAN FERNANDO LIMITADA</field>
+      <field name="bic">341</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_316" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SAN MARCOS</field>
+      <field name="bic">358</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_317" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SAN PEDRO LTDA.</field>
+      <field name="bic">611</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_318" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SAN VALENTIN</field>
+      <field name="bic">9911</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_319" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SAN VICENTE DEL SUR LTDA.</field>
+      <field name="bic">676</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_320" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SANTA ANA DE NAYON</field>
+      <field name="bic">704</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_321" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SANTA LUCIA LTDA</field>
+      <field name="bic">9941</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_322" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SAQUISILI LTDA.</field>
+      <field name="bic">343</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_323" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SEMILLAS DE PANGUA</field>
+      <field name="bic">690</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_324" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SENOR DEL ARBOL</field>
+      <field name="bic">722</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_325" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SOLIDARIA LTDA.- COTOPAXI</field>
+      <field name="bic">9956</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_326" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SUBOFICIALES DE LA POLICIA NACION</field>
+      <field name="bic">9908</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_327" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SUMAK NAN LTDA.</field>
+      <field name="bic">307</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_328" model="res.bank">
+      <field name="name">COOP. DE A. Y C. SUMAK SAMY LTDA.</field>
+      <field name="bic">571</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_329" model="res.bank">
+      <field name="name">COOP. DE A. Y C. TAMBOLOMA LTDA.</field>
+      <field name="bic">9943</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_330" model="res.bank">
+      <field name="name">COOP. DE A. Y C. TOTALIFE LTDA</field>
+      <field name="bic">9912</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_331" model="res.bank">
+      <field name="name">COOP. DE A. Y C. UNIBLOCK Y SERVICIOS LTDA.</field>
+      <field name="bic">340</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_332" model="res.bank">
+      <field name="name">COOP. DE A. Y C. UNIDAD Y PROGRESO</field>
+      <field name="bic">9957</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_333" model="res.bank">
+      <field name="name">COOP. DE A. Y C. UNION EL EJIDO</field>
+      <field name="bic">319</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_334" model="res.bank">
+      <field name="name">COOP. DE A. Y C. UNION POPULAR LTDA.</field>
+      <field name="bic">9949</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_335" model="res.bank">
+      <field name="name">COOP. DE A. Y C. UNION QUISAPINCHA LTDA.</field>
+      <field name="bic">608</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_336" model="res.bank">
+      <field name="name">COOP. DE A. Y C. UNION Y DESARROLLO</field>
+      <field name="bic">9901</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_337" model="res.bank">
+      <field name="name">COOP. DE A. Y C. UNIOTAVALO LTDA.</field>
+      <field name="bic">318</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_338" model="res.bank">
+      <field name="name">COOP. DE A. Y C. VILCABAMBA CACVIL</field>
+      <field name="bic">693</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_339" model="res.bank">
+      <field name="name">COOP. DE A. Y C. VIRGEN DEL CISNE</field>
+      <field name="bic">573</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_340" model="res.bank">
+      <field name="name">COOP. DE A.Y C. PRODUC. AHORRO INVERS. SERVICIO P.</field>
+      <field name="bic">382</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_341" model="res.bank">
+      <field name="name">COOP. DE AHO Y CRED LOS ANDES LATINOS LTDA.</field>
+      <field name="bic">567</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_342" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CRED. LA INMACULADA DE SAN PLACI</field>
+      <field name="bic">367</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_343" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CRED. SANTA ROSA LTDA</field>
+      <field name="bic">334</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_344" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO 1 DE JULIO</field>
+      <field name="bic">306</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_345" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO 4 DE OCTUBRE LTDA.</field>
+      <field name="bic">294</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_346" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO ACCION Y DESARROLLO LTDA</field>
+      <field name="bic">8002</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_347" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO ALFONSO JARAMILLO C.C.C.</field>
+      <field name="bic">296</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_348" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO ANDINA LTDA.</field>
+      <field name="bic">8001</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_349" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO ATUNTAQUI LTDA.</field>
+      <field name="bic">223</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_350" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO BASE DE TAURA</field>
+      <field name="bic">9930</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_351" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO CHOLA CUENCANA LTDA.</field>
+      <field name="bic">275</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_352" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO COMERCIO LTDA PORTOVIEJO</field>
+      <field name="bic">224</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_353" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO CREDI FACIL LTDA.</field>
+      <field name="bic">295</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_354" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO CRISTO REY</field>
+      <field name="bic">291</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_355" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO EDUC.DEL TUNGURAHUA LTDA</field>
+      <field name="bic">287</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_356" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO EDUCADORES DE CHIMBORAZO</field>
+      <field name="bic">292</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_357" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO EL CAFETAL</field>
+      <field name="bic">313</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_358" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO EL CALVARIO LTDA</field>
+      <field name="bic">452</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_359" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO FOCASH LTDA.</field>
+      <field name="bic">675</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_360" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO FUNDAR</field>
+      <field name="bic">310</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_361" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO LA DOLOROSA LTDA</field>
+      <field name="bic">225</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_362" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO MUSHUK YUYAY</field>
+      <field name="bic">686</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_363" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO ONCE DE JUNIO</field>
+      <field name="bic">335</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_364" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO PEDRO MONCAYO LTDA.</field>
+      <field name="bic">279</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_365" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO PILAHUIN</field>
+      <field name="bic">454</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_366" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO PROFUTURO LTDA.</field>
+      <field name="bic">628</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_367" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO PUCARA LTDA</field>
+      <field name="bic">455</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_368" model="res.bank">
+      <field name="name">COOP. DE AHORRO Y CREDITO SARAGUROS</field>
+      <field name="bic">642</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_369" model="res.bank">
+      <field name="name">COOP. JARDIN AZUAYO</field>
+      <field name="bic">76</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_370" model="res.bank">
+      <field name="name">COOP. JUVENTUD ECUATORIANA PROGRESISTA LTDA.</field>
+      <field name="bic">213</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_371" model="res.bank">
+      <field name="name">COOP. PREVISION AHORRO Y DESARROLLO</field>
+      <field name="bic">226</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_372" model="res.bank">
+      <field name="name">COOP. WARMIKUNAPAK RIKCHARI</field>
+      <field name="bic">400</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_373" model="res.bank">
+      <field name="name">COOP.A.Y C. SANTA MARIA DE LA MANGA DEL CURA LTDA.</field>
+      <field name="bic">371</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_374" model="res.bank">
+      <field name="name">COOP.AHO Y CREDITO DE LA PEQ. EMP. DE LOJA CACPE</field>
+      <field name="bic">350</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_375" model="res.bank">
+      <field name="name">COOP.AHORRO Y CREDITO ALIANZA DEL VALLE LTDA</field>
+      <field name="bic">227</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_376" model="res.bank">
+      <field name="name">COOP.AHORRO Y CREDITO CHONE LTDA</field>
+      <field name="bic">229</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_377" model="res.bank">
+      <field name="name">COOP.AHORRO Y CREDITO MAGISTERIO MANABITA LIMITADA</field>
+      <field name="bic">369</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_378" model="res.bank">
+      <field name="name">COOP.DE A. Y C. ARTESANAL DEL AZUAY</field>
+      <field name="bic">710</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_379" model="res.bank">
+      <field name="name">COOP.DE A. Y C. DE CRECIMIENTO ECONOMICO RENTABLE</field>
+      <field name="bic">592</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_380" model="res.bank">
+      <field name="name">COOP.DE A. Y C. POPULAR Y SOLIDARIA</field>
+      <field name="bic">594</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_381" model="res.bank">
+      <field name="name">COOP.DE A. Y C. VENCEDORES DE PICHINCHA LTDA.</field>
+      <field name="bic">254</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_382" model="res.bank">
+      <field name="name">COOP.DE A.Y C. EL COMERCIANTE LTDA (MIES)</field>
+      <field name="bic">345</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_383" model="res.bank">
+      <field name="name">COOP.DE AHORRO Y CREDITO 29 DE ENERO</field>
+      <field name="bic">355</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_384" model="res.bank">
+      <field name="name">COOP.DE AHORRO Y CREDITO ABDON CALDERON LTDA.</field>
+      <field name="bic">364</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_385" model="res.bank">
+      <field name="name">COOP.DE AHORRO Y CREDITO AGROPRODUCTIVA MANABI LTD</field>
+      <field name="bic">366</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_386" model="res.bank">
+      <field name="name">COOP.DE AHORRO Y CREDITO CACEC LTDA. (COTOPAXI)</field>
+      <field name="bic">253</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_387" model="res.bank">
+      <field name="name">COOP.DE AHORRO Y CREDITO CAMARA DE COMERCIO DE LOJ</field>
+      <field name="bic">591</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_388" model="res.bank">
+      <field name="name">COOP.DE AHORRO Y CREDITO CIUDAD DE ZAMORA</field>
+      <field name="bic">596</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_389" model="res.bank">
+      <field name="name">COOP.DE AHORRO Y CREDITO MICROEMPRESARIAL SUCRE</field>
+      <field name="bic">314</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_390" model="res.bank">
+      <field name="name">COOP.DE AHORRO Y CREDITO POLICIA NACIONAL</field>
+      <field name="bic">79</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_391" model="res.bank">
+      <field name="name">COOP.DE AHORRO Y CREDITO SAN PLACIDO LTDA.</field>
+      <field name="bic">595</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_392" model="res.bank">
+      <field name="name">COOPERATIVA 15 DE AGOSTO PILACOTO</field>
+      <field name="bic">290</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_393" model="res.bank">
+      <field name="name">COOPERATIVA DE A Y C ACCION IMBABURAPAK LTDA.</field>
+      <field name="bic">688</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_394" model="res.bank">
+      <field name="name">COOPERATIVA DE A Y C MUSHUK SOLIDARIA</field>
+      <field name="bic">691</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_395" model="res.bank">
+      <field name="name">COOPERATIVA DE A Y C NUEVA VISION</field>
+      <field name="bic">674</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_396" model="res.bank">
+      <field name="name">COOPERATIVA DE A. Y C. TEXTIL 14 DE MARZO</field>
+      <field name="bic">706</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_397" model="res.bank">
+      <field name="name">COOPERATIVA DE AH. Y CREDITO RIOCHICO</field>
+      <field name="bic">579</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_398" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO CANAR LTDA.</field>
+      <field name="bic">308</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_399" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO CREA LTDA ( MIES)</field>
+      <field name="bic">603</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_400" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO DEL AZUAY</field>
+      <field name="bic">264</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_401" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO DEL COLEGIO DE ARQ</field>
+      <field name="bic">265</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_402" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO DR. CORNELIO SAENZ</field>
+      <field name="bic">681</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_403" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO ECONOMIA DEL SUR C</field>
+      <field name="bic">351</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_404" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO EL PARAISO MANGA D</field>
+      <field name="bic">695</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_405" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO ETAPA</field>
+      <field name="bic">725</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_406" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO GANANSOL LTDA</field>
+      <field name="bic">263</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_407" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO INTI WASI LTDA.</field>
+      <field name="bic">643</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_408" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO JOYOCOTO LTDA.</field>
+      <field name="bic">316</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_409" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO LA BENEFICA LTDA.</field>
+      <field name="bic">363</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_410" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO LLANGANATES</field>
+      <field name="bic">348</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_411" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO MACODES LTDA</field>
+      <field name="bic">260</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_412" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO MIGRANTES Y EMPREN</field>
+      <field name="bic">352</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_413" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO MINGA LTDA.</field>
+      <field name="bic">293</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_414" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO MULTIEMPRESARIAL L</field>
+      <field name="bic">268</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_415" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO NUKANCHIK</field>
+      <field name="bic">266</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_416" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO PROVIDA</field>
+      <field name="bic">281</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_417" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO RUNA SHUNGO LTDA.</field>
+      <field name="bic">357</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_418" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO SAN ANTONIO LTDA.</field>
+      <field name="bic">309</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_419" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO SAN BARTOLO LTDA</field>
+      <field name="bic">255</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_420" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO SAN ISIDRO LTDA.</field>
+      <field name="bic">647</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_421" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO SAN JOSE S.J.</field>
+      <field name="bic">283</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_422" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO SAN SEBASTIAN</field>
+      <field name="bic">353</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_423" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO SANTA ANA LTDA</field>
+      <field name="bic">231</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_424" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO SANTA ISABEL LTDA.</field>
+      <field name="bic">262</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_425" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO SANTIAGO LTDA</field>
+      <field name="bic">593</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_426" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO SOCIO AMIGO</field>
+      <field name="bic">360</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_427" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO SOLIDARIA LTDA</field>
+      <field name="bic">347</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_428" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO SUMAK SISA</field>
+      <field name="bic">711</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_429" model="res.bank">
+      <field name="name">COOPERATIVA DE AHORRO Y CREDITO WUAMANLOMA LTDA.</field>
+      <field name="bic">9947</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_430" model="res.bank">
+      <field name="name">CORPORACION FINANCIERA</field>
+      <field name="bic">700</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_431" model="res.bank">
+      <field name="name">DECEVALE S.A.</field>
+      <field name="bic">9940</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_432" model="res.bank">
+      <field name="name">ECOFSA CASA DE VALORES S.A.</field>
+      <field name="bic">9919</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_433" model="res.bank">
+      <field name="name">ECUABURSATIL CASA DE VALORES S.A.</field>
+      <field name="bic">9923</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_434" model="res.bank">
+      <field name="name">FINANCIERA - DINERS CLUB DEL ECUADOR</field>
+      <field name="bic">232</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_435" model="res.bank">
+      <field name="name">FINANCOOP</field>
+      <field name="bic">82</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_436" model="res.bank">
+      <field name="name">FONDO DE CESANTIA DEL MAGISTERIO ECUAT FCME-FCPC</field>
+      <field name="bic">469</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_437" model="res.bank">
+      <field name="name">HOLDUNPARTNERS CASA DE VALORES S.A.</field>
+      <field name="bic">9929</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_438" model="res.bank">
+      <field name="name">INMOVALOR CASA DE VALORES S.A.</field>
+      <field name="bic">9922</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_439" model="res.bank">
+      <field name="name">INTERDIN S.A.</field>
+      <field name="bic">349</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_440" model="res.bank">
+      <field name="name">KAPITAL ONE CASA DE VALORES S.A. KAOVALSA</field>
+      <field name="bic">9936</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_441" model="res.bank">
+      <field name="name">MASVALORES CASA DE VALORES S.A CAVAMASA</field>
+      <field name="bic">9933</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_442" model="res.bank">
+      <field name="name">MERCAPITAL CASA DE VALORES S.A.</field>
+      <field name="bic">9925</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_443" model="res.bank">
+      <field name="name">MERCHANTVALORES CASA DE VALORES S.A.</field>
+      <field name="bic">9920</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_444" model="res.bank">
+      <field name="name">METROVALORES CASA DE VALORES S.A.</field>
+      <field name="bic">9927</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_445" model="res.bank">
+      <field name="name">MUTUALISTA AMBATO</field>
+      <field name="bic">233</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_446" model="res.bank">
+      <field name="name">MUTUALISTA AZUAY</field>
+      <field name="bic">234</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_447" model="res.bank">
+      <field name="name">MUTUALISTA IMBABURA</field>
+      <field name="bic">236</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_448" model="res.bank">
+      <field name="name">MUTUALISTA PICHINCHA</field>
+      <field name="bic">238</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_449" model="res.bank">
+      <field name="name">ORION CASA DE VALORES S.A</field>
+      <field name="bic">9917</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_450" model="res.bank">
+      <field name="name">PICAVAL CASA DE VALORES S.A</field>
+      <field name="bic">9915</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_451" model="res.bank">
+      <field name="name">PLUS VALORES CASA DE VALORES S.A.</field>
+      <field name="bic">9924</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_452" model="res.bank">
+      <field name="name">PLUSBURSATIL CASA DE VALORES S.A</field>
+      <field name="bic">9937</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_453" model="res.bank">
+      <field name="name">PORTAFOLIO CASA DE VALORES S.A. PORTAVALOR</field>
+      <field name="bic">9926</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_454" model="res.bank">
+      <field name="name">PRODUBANCO / PROMERICA</field>
+      <field name="bic">36</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_455" model="res.bank">
+      <field name="name">REAL CASA DE VALORES DE GUAYAQUIL S.A.</field>
+      <field name="bic">724</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_456" model="res.bank">
+      <field name="name">SANTA FE CASA DE VALORES S.A. SANTAFEVALORES</field>
+      <field name="bic">9914</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_457" model="res.bank">
+      <field name="name">SILVERCROSS S.A CASA DE VALORES SCCV</field>
+      <field name="bic">723</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_458" model="res.bank">
+      <field name="name">STRATEGA CASA DE VALORES S.A.</field>
+      <field name="bic">9918</field>
+      <field name="country" ref="base.ec" />
+   </record>
+   <record id="oa_l10n_ec_oa_l10n_ec_res_bank_459" model="res.bank">
+      <field name="name">VECTORGLOBAL WMG CASA DE VALORES S.A.</field>
+      <field name="bic">9928</field>
+      <field name="country" ref="base.ec" />
+   </record>
+</odoo>
+

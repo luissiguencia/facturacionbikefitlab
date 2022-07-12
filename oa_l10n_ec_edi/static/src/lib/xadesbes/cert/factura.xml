@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>OPENALLIANCE CIA LTDA</razonSocial>
+    <ruc>0190345297001</ruc>
+    <claveAcceso>2809202101019034529700120011000000006820000159512</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>100</ptoEmi>
+    <secuencial>000000682</secuencial>
+    <dirMatriz>Santiago Carrasco 1-66 Rafael Torres</dirMatriz>
+    <regimenMicroempresas>CONTRIBUYENTE RÉGIMEN MICROEMPRESAS</regimenMicroempresas>
+    <agenteRetencion>1</agenteRetencion>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>28/09/2021</fechaEmision>
+    <dirEstablecimiento>Santiago Carrasco 1-66 y Rafael Torres</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>HUMBOLDT ZENTRUM</razonSocialComprador>
+    <identificacionComprador>0993274127001</identificacionComprador>
+    <direccionComprador>DOCTOR HECTOR ROMERO 216 Y AV. DOCTOR JOSE GARCIA MORENO</direccionComprador>
+    <totalSinImpuestos>600.00</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <baseImponible>600.00</baseImponible>
+        <tarifa>12</tarifa>
+        <valor>72.00</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>672.00</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>672.00</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>N/A</codigoPrincipal>
+      <descripcion>Servicios de soporte (10h), mantenimiento y garantía. Periodo: 09/2021</descripcion>
+      <cantidad>10.00</cantidad>
+      <precioUnitario>60.00</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>600.00</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>600.00</baseImponible>
+          <valor>72.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="campoadicional0">Dirección: DOCTOR HECTOR ROMERO 216</campoAdicional>
+    <campoAdicional nombre="campoadicional1">Telf: 2850260</campoAdicional>
+    <campoAdicional nombre="campoadicional2">Email: info@humboldtzentrum.com</campoAdicional>
+    <campoAdicional nombre="campoadicional3">______________________________________________________</campoAdicional>
+    <campoAdicional nombre="campoadicional4">Datos para transferencia:</campoAdicional>
+    <campoAdicional nombre="campoadicional5">Cta. Corriente # 07430825</campoAdicional>
+    <campoAdicional nombre="campoadicional6">Banco del pacifico</campoAdicional>
+    <campoAdicional nombre="campoadicional7">A nombre de OPENALLIANCE CIA. LTDA.</campoAdicional>
+  </infoAdicional>
+</factura>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="oa_l10n_ec.document_type_ec_18" model="l10n_latam.document.type">
+        <field name="evoucher_enable" eval="True"></field>
+    </record>
+
+</odoo>

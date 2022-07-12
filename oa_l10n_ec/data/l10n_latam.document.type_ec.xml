@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="document_type_ec_1" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">1</field>
+        <field name="code">01</field>
+        <field name="name">Factura</field>
+        <field name="report_name">Factura</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">FAC</field>
+    </record>
+    <record id="document_type_ec_2" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">2</field>
+        <field name="code">02</field>
+        <field name="name">Nota o boleta de venta</field>
+        <field name="report_name">Nota o boleta de venta</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">NV</field>
+    </record>
+    <record id="document_type_ec_3" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">3</field>
+        <field name="code">03</field>
+        <field name="name">Liquidación de compra de Bienes o Prestación de servicios</field>
+        <field name="report_name">Liquidación de compra de Bienes o Prestación de servicios</field>
+        <field name="internal_type">purchase_liquidation</field>
+        <field name="doc_code_prefix">LQC</field>
+    </record>
+    <record id="document_type_ec_4" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">4</field>
+        <field name="code">04</field>
+        <field name="name">Nota de Crédito</field>
+        <field name="report_name">Nota de Crédito</field>
+        <field name="internal_type">credit_note</field>
+        <field name="doc_code_prefix">NC</field>
+    </record>
+    <record id="document_type_ec_5" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">5</field>
+        <field name="code">05</field>
+        <field name="name">Nota de Débito</field>
+        <field name="report_name">Nota de Débito</field>
+        <field name="internal_type">debit_note</field>
+        <field name="doc_code_prefix">ND</field>
+    </record>
+    <record id="document_type_ec_6" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">6</field>
+        <field name="code">06</field>
+        <field name="name">Guías de Remisión</field>
+        <field name="report_name">Guías de Remisión</field>
+        <field name="internal_type">debit_note</field>
+        <field name="doc_code_prefix">GR</field>
+    </record>
+    <record id="document_type_ec_7" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">7</field>
+        <field name="code">07</field>
+        <field name="name">Comprobante de Retención</field>
+        <field name="report_name">Comprobante de Retención</field>
+        <field name="internal_type">retention</field>
+        <field name="doc_code_prefix">RET</field>
+    </record>
+    <record id="document_type_ec_8" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">8</field>
+        <field name="code">08</field>
+        <field name="name">Boletos o entradas a espectáculos públicos</field>
+        <field name="report_name">Boletos o entradas a espectáculos públicos</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">BOL</field>
+    </record>
+    <record id="document_type_ec_9" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">9</field>
+        <field name="code">09</field>
+        <field name="name">Tiquetes o vales emitidos por máquinas registradoras</field>
+        <field name="report_name">Tiquetes o vales emitidos por máquinas registradoras</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">DOC</field>
+    </record>
+    <record id="document_type_ec_11" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">11</field>
+        <field name="code">11</field>
+        <field name="name">Pasajes expedidos por empresas de aviación</field>
+        <field name="report_name">Pasajes expedidos por empresas de aviación</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">TKT</field>
+    </record>
+    <record id="document_type_ec_12" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">12</field>
+        <field name="code">12</field>
+        <field name="name">Documentos emitidos por instituciones financieras</field>
+        <field name="report_name">Documentos emitidos por instituciones financieras</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">DOCF</field>
+    </record>
+    <record id="document_type_ec_15" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">15</field>
+        <field name="code">15</field>
+        <field name="name">Comprobantes de venta emitidos en exterior</field>
+        <field name="report_name">Comprobantes de venta emitidos en exterior</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">DOCE</field>
+    </record>
+    <record id="document_type_ec_16" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">16</field>
+        <field name="code">16</field>
+        <field name="name">Formulario Único de Exportación (FUE) o Declaración Aduanera Única (DAU) o Declaración Andina de Valor (DAV)</field>
+        <field name="report_name">Formulario Único de Exportación (FUE) o Declaración Aduanera Única (DAU) o Declaración Andina de Valor (DAV)</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">DEX</field>
+    </record>
+    <record id="document_type_ec_18" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">18</field>
+        <field name="code">18</field>
+        <field name="name">Documentos autorizados utilizados en ventas excepto N/C N/D</field>
+        <field name="report_name">Factura</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">FAC</field>
+    </record>
+    <record id="document_type_ec_19" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">19</field>
+        <field name="code">19</field>
+        <field name="name">Comprobantes de Pago de Cuotas o Aportes</field>
+        <field name="report_name">Comprobantes de Pago de Cuotas o Aportes</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">PAG</field>
+    </record>
+    <record id="document_type_ec_20" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">20</field>
+        <field name="code">20</field>
+        <field name="name">Documentos por Servicios Administrativos emitidos por Inst. del Estado</field>
+        <field name="report_name">Documentos por Servicios Administrativos emitidos por Inst. del Estado</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">DOCA</field>
+    </record>
+    <record id="document_type_ec_21" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">21</field>
+        <field name="code">21</field>
+        <field name="name">Carta de Porte Aéreo</field>
+        <field name="report_name">Carta de Porte Aéreo</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">CAR</field>
+    </record>
+    <record id="document_type_ec_22" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">22</field>
+        <field name="code">22</field>
+        <field name="name">RECAP</field>
+        <field name="report_name">RECAP</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">RECAP</field>
+    </record>
+    <record id="document_type_ec_23" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">23</field>
+        <field name="code">23</field>
+        <field name="name">Nota de Crédito TC</field>
+        <field name="report_name">Nota de Crédito TC</field>
+        <field name="internal_type">credit_note</field>
+        <field name="doc_code_prefix">NCTC</field>
+    </record>
+    <record id="document_type_ec_24" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">24</field>
+        <field name="code">24</field>
+        <field name="name">Nota de Débito TC</field>
+        <field name="report_name">Nota de Débito TC</field>
+        <field name="internal_type">debit_note</field>
+        <field name="doc_code_prefix">NDTC</field>
+    </record>
+    <record id="document_type_ec_41" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">41</field>
+        <field name="code">41</field>
+        <field name="name">Comprobante de venta emitido por reembolso</field>
+        <field name="report_name">Comprobante de venta emitido por reembolso</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">REEM</field>
+    </record>
+    <record id="document_type_ec_42" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">42</field>
+        <field name="code">42</field>
+        <field name="name">Documento retención presuntiva y retención emitida por propio vendedor o por intermediario</field>
+        <field name="report_name">Documento retención presuntiva y retención emitida por propio vendedor o por intermediario</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">DOC</field>
+    </record>
+    <record id="document_type_ec_43" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">43</field>
+        <field name="code">43</field>
+        <field name="name">Liquidacion para Explotacion y Exploracion de Hidrocarburos</field>
+        <field name="report_name">Liquidacion para Explotacion y Exploracion de Hidrocarburos</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">LQEX</field>
+    </record>
+    <record id="document_type_ec_44" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">44</field>
+        <field name="code">44</field>
+        <field name="name">Comprobante de Contribuciones y Aportes</field>
+        <field name="report_name">Comprobante de Contribuciones y Aportes</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">COM</field>
+    </record>
+    <record id="document_type_ec_45" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">45</field>
+        <field name="code">45</field>
+        <field name="name">Liquidación por reclamos de aseguradoras</field>
+        <field name="report_name">Liquidación por reclamos de aseguradoras</field>
+        <field name="internal_type">purchase_liquidation</field>
+        <field name="doc_code_prefix">LQA</field>
+    </record>
+    <record id="document_type_ec_47" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">47</field>
+        <field name="code">47</field>
+        <field name="name">Nota de Crédito por Reembolso Emitida por Intermediario</field>
+        <field name="report_name">Nota de Crédito por Reembolso Emitida por Intermediario</field>
+        <field name="internal_type">credit_note</field>
+        <field name="doc_code_prefix">NCR</field>
+    </record>
+    <record id="document_type_ec_48" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">48</field>
+        <field name="code">48</field>
+        <field name="name">Nota de Débito por Reembolso Emitida por Intermediario</field>
+        <field name="report_name">Nota de Débito por Reembolso Emitida por Intermediario</field>
+        <field name="internal_type">debit_note</field>
+        <field name="doc_code_prefix">NDR</field>
+    </record>
+    <record id="document_type_ec_49" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">49</field>
+        <field name="code">49</field>
+        <field name="name">Proveedor Directo de Exportador Bajo Régimen Especial</field>
+        <field name="report_name">Proveedor Directo de Exportador Bajo Régimen Especial</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">DOC</field>
+    </record>
+    <record id="document_type_ec_50" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">50</field>
+        <field name="code">50</field>
+        <field name="name">A Inst. Estado y Empr. Públicas que percibe ingreso exento de Imp. Renta</field>
+        <field name="report_name">A Inst. Estado y Empr. Públicas que percibe ingreso exento de Imp. Renta</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">DOC</field>
+    </record>
+    <record id="document_type_ec_51" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">51</field>
+        <field name="code">51</field>
+        <field name="name">N/C A Inst. Estado y Empr. Públicas que percibe ingreso exento de Imp. Renta</field>
+        <field name="report_name">N/C A Inst. Estado y Empr. Públicas que percibe ingreso exento de Imp. Renta</field>
+        <field name="internal_type">credit_note</field>
+        <field name="doc_code_prefix">NCE</field>
+    </record>
+    <record id="document_type_ec_52" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">52</field>
+        <field name="code">52</field>
+        <field name="name">N/D A Inst. Estado y Empr. Públicas que percibe ingreso exento de Imp. Renta</field>
+        <field name="report_name">N/D A Inst. Estado y Empr. Públicas que percibe ingreso exento de Imp. Renta</field>
+        <field name="internal_type">debit_note</field>
+        <field name="doc_code_prefix">NDE</field>
+    </record>
+    <record id="document_type_ec_294" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">294</field>
+        <field name="code">294</field>
+        <field name="name">Liquidación de compra de Bienes Muebles Usados</field>
+        <field name="report_name">Liquidación de compra de Bienes Muebles Usados</field>
+        <field name="internal_type">purchase_liquidation</field>
+        <field name="doc_code_prefix">LQM</field>
+    </record>
+    <record id="document_type_ec_344" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">344</field>
+        <field name="code">344</field>
+        <field name="name">Liquidación de compra de vehículos usados</field>
+        <field name="report_name">Liquidación de compra de vehículos usados</field>
+        <field name="internal_type">purchase_liquidation</field>
+        <field name="doc_code_prefix">LQV</field>
+    </record>
+    <record id="document_type_ec_364" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">364</field>
+        <field name="code">364</field>
+        <field name="name">Acta Entrega-Recepción PET</field>
+        <field name="report_name">Acta Entrega-Recepción PET</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">RPET</field>
+    </record>
+    <record id="document_type_ec_370" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">370</field>
+        <field name="code">370</field>
+        <field name="name">Factura operadora transporte / socio</field>
+        <field name="report_name">Factura operadora transporte / socio</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">FAC</field>
+    </record>
+    <record id="document_type_ec_371" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">371</field>
+        <field name="code">371</field>
+        <field name="name">Comprobante socio a operadora de transporte</field>
+        <field name="report_name">Comprobante socio a operadora de transporte</field>
+        <field name="internal_type">invoice</field>
+        <field name="doc_code_prefix">COMP</field>
+    </record>
+    <record id="document_type_ec_372" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">372</field>
+        <field name="code">372</field>
+        <field name="name">Nota de crédito operadora transporte / socio</field>
+        <field name="report_name">Nota de crédito operadora transporte / socio</field>
+        <field name="internal_type">credit_note</field>
+        <field name="doc_code_prefix">NCO</field>
+    </record>
+    <record id="document_type_ec_373" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">373</field>
+        <field name="code">373</field>
+        <field name="name">Nota de débito operadora transporte / socio</field>
+        <field name="report_name">Nota de débito operadora transporte / socio</field>
+        <field name="internal_type">debit_note</field>
+        <field name="doc_code_prefix">NDO</field>
+    </record>
+    <record id="document_type_ec_374" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">374</field>
+        <field name="code">374</field>
+        <field name="name">Nota de débito operadora transporte / socio</field>
+        <field name="report_name">Nota de débito operadora transporte / socio</field>
+        <field name="internal_type">debit_note</field>
+        <field name="doc_code_prefix">NDO</field>
+    </record>
+    <record id="document_type_ec_375" model="l10n_latam.document.type">
+        <field name="country_id" ref="base.ec"/>
+        <field name="sequence">375</field>
+        <field name="code">375</field>
+        <field name="name">Liquidación de compra RISE de bienes o prestación de servicios</field>
+        <field name="report_name">Liquidación de compra RISE de bienes o prestación de servicios</field>
+        <field name="internal_type">purchase_liquidation</field>
+        <field name="doc_code_prefix">LQRISE</field>
+    </record>
+</odoo>

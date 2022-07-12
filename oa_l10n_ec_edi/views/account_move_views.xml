@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_move_form_inh" model="ir.ui.view">
+        <field name="name">account.move.form.inh</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='button_cancel']" position="after">
+                <button name="run_evoucher_process" type="object" attrs="{'invisible':[('evoucher_state','not in',['init','quenued'])],}" string="Run Evouher Process" icon="/oalliance_account_evoucher_sri/static/src/img/icons/sriicon.png" context="{'step':1,}" />
+                <button name="run_evoucher_process" type="object" attrs="{'invisible':[('evoucher_state','!=','received')],}" string="Get Auth." icon="/oalliance_account_evoucher_sri/static/src/img/icons/sriicon.png" context="{'stop':True,'step':6,}" />
+                <button name="run_evoucher_process" type="object" attrs="{'invisible':['|',('evoucher_state','not in',['authorized','received']),('evoucher_notification_sent','=',True)],}" string="Notify Client" icon="/oalliance_account_evoucher_sri/static/src/img/icons/sriicon.png" context="{'notify':True,}" />
+                <button name="run_evoucher_process" type="object" attrs="{'invisible':['|',('evoucher_state','not in',['authorized','received']),('evoucher_notification_sent','=',False)],}" string="Resend Notification" icon="/oalliance_account_evoucher_sri/static/src/img/icons/sriicon.png" context="{'notify':True,}" />
+            </xpath>
+            <xpath expr="//header" position="after">
+                <div class="alert alert-info" role="alert" style="margin-bottom:0px;" attrs="{'invisible': ['|', ('edi_web_services_to_process', 'in', ['', False]), ('state', '=', 'draft')]}">
+                    <div>The invoice will be processed asynchronously by the following E-invoicing SRI service :
+                    </div>
+                    <button name="run_evoucher_process" type="object" class="oe_link" string="Send now" context="{'step':1,}"/>
+                </div>
+                <div class="alert alert-danger" role="alert" style="margin-bottom:0px;" attrs="{'invisible': ['|', ('evoucher_state', '=', 0), ('edi_blocking_level', '!=', 'error')]}">
+                    <div class="o_row">
+                        <!--field name="edi_error_message"/-->
+                    </div>
+                </div>
+            </xpath>
+            <field name="l10n_latam_document_type_id" position="after">
+                <field name="evoucher_enable" />
+                <label for="evoucher_state" string="Evoucher State" attrs="{'invisible':[('evoucher_enable','!=',True)],}" />
+                <div attrs="{'invisible':[('evoucher_enable','!=',True)],}">
+                    <table>
+                        <tr>
+                            <td>
+                                <field name="evoucher_state" statusbar_visible="nope" widget="statusbar" attrs="{'invisible':[('evoucher_state','in',['returned','not_authorized'])],}" />
+                            </td>
+                            <td width="10px"></td>
+                            <td>
+                                <div attrs="{'invisible':['|',('evoucher_notification_sent','=',True),('evoucher_state','not in',['authorized','received','notified'])]}" style="display: inline-block;height:29px;width:180px;background-color:#ededed;">
+                                    <div style="margin-top:8px;float:left;">
+                                        <span style="margin-left:7px">Notificación Pendiente</span>
+                                    </div>
+                                    <img alt="No Sent" style="margin-left:6px;margin-top:3px" width="30px" height="24px" src="/oalliance_account_evoucher_sri/static/src/img/icons/notsent.png"></img>
+                                </div>
+                                <div attrs="{'invisible':['|',('evoucher_notification_sent','=',False),('evoucher_state','not in',['authorized','received','notified'])]}" style="display: inline-block;height:29px;width:170px;background-color:#ededed;">
+                                    <div style="margin-top:8px;float:left;">
+                                        <span style="margin-left:7px;color:#547abd">Notificación Enviada</span>
+                                    </div>
+                                    <img alt="Sent" style="margin-left:6px;margin-top:3px" width="30px" height="24px" src="/oalliance_account_evoucher_sri/static/src/img/icons/sent.png"></img>
+                                </div>
+
+                                <div attrs="{'invisible':[('evoucher_state','!=','returned'),]}" style="display: inline-block;height:29px;width:170px;background-color:#dedede;margin-left:-12px;">
+                                    <div style="margin-top:8px;float:left;">
+                                        <span style="margin-left:7px">DEVUELTA POR SRI</span>
+                                    </div>
+                                    <img alt="Warning" style="margin-left:6px;margin-top:3px" height="20px" src="/oalliance_account_evoucher_sri/static/src/img/icons/warningsmall.png"></img>
+                                </div>
+                                <div attrs="{'invisible':[('evoucher_state','!=','not_authorized'),]}" style="display: inline-block;height:29px;width:150px;background-color:#dedede;margin-left:-12px;">
+                                    <div style="margin-top:8px;float:left;">
+                                        <span style="margin-left:7px;color:red;font-weight:bold;">NO AUTORIZADA</span>
+                                    </div>
+                                    <img alt="Error" style="margin-left:6px;margin-top:3px" height="20px" src="/oalliance_account_evoucher_sri/static/src/img/icons/errorsmall.png"></img>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <field name="evoucher_access_key" attrs="{'invisible':['|',('evoucher_enable','!=',True),('evoucher_state','=','draft')],}" readonly="1" />
+                <field name="evoucher_auth_date" attrs="{'invisible':['|',('evoucher_enable','!=',True),('evoucher_state','not in',['authorized','notified'])],}" readonly="1" />
+            </field>
+            <xpath expr="//page[@id='other_tab']" position="after">
+                <page string="Evoucher" attrs="{'invisible': [('evoucher_enable','=',False)]}">
+                    <button name="run_evoucher_process" type="object" attrs="{'invisible':[('evoucher_state','not in',['init','returned','rejected'])],}" string="Build Xml and Continue" icon="STOCK_NEW" context="{'step':2,}" />
+                    <button name="run_evoucher_process" type="object" attrs="{'invisible':[('evoucher_state','not in',['init','returned','rejected'])],}" string="Build Xml" icon="STOCK_NEW" context="{'stop':True,'step':2}" />
+                    <button name="run_evoucher_process" type="object" attrs="{'invisible':[('evoucher_state','!=','xml_ready')],}" string="Sign Xml and Continue" icon="STOCK_EDIT" context="{'step':3,}" />
+                    <button name="run_evoucher_process" type="object" attrs="{'invisible':[('evoucher_state','!=','xml_ready')],}" string="Sign Xml" icon="STOCK_EDIT" context="{'stop':True,'step':3}" />
+                    <button name="run_evoucher_process" type="object" attrs="{'invisible':[('evoucher_state','not in',['signed','contingency_ready'])],}" string="Test Connection and Continue" icon="STOCK_NETWORK" context="{'step':4,}" />
+                    <button name="run_evoucher_process" type="object" attrs="{'invisible':[('evoucher_state','not in',['signed','contingency_ready'])],}" string="Test Connection Xml" icon="STOCK_NETWORK" context="{'stop':True,'step':4}" />
+                    <button name="run_evoucher_process" type="object" attrs="{'invisible':[('evoucher_state','!=','ready')],}" string="Send Xml and Continue" icon="terp-gtk-jump-to-ltr" context="{'step':5,}" />
+                    <button name="run_evoucher_process" type="object" attrs="{'invisible':[('evoucher_state','!=','ready')],}" string="Send Xml" icon="terp-gtk-jump-to-ltr" context="{'stop':True,'step':5}" />
+                    <button name="run_evoucher_process" type="object" attrs="{'invisible':[('evoucher_state','!=','received')],}" string="Get Auth. and Continue" icon="terp-gtk-jump-to-rtl" context="{'step':6,}" />
+                    <button name="run_evoucher_process" type="object" attrs="{'invisible':[('evoucher_state','!=','authorized')],}" string="Send Notification" icon="terp-mail-message-new" context="{'step':7,}" />
+                    <!--field name="help_field" readonly="1" widget="url" /-->
+                    <group>
+                        <group>
+                            <field name="evoucher_force_stop" />
+                            <!--field name="evoucher_all_attachments" /-->
+                            <!--field name="evoucher_new_seq" attrs="{'invisible':[('evoucher_state','not in',['rejected'])],}" /-->
+                            <field name="evoucher_notification_sent" invisible="1" />
+                        </group>
+                        <group>
+                            <field name="evoucher_environment_id" readonly="1" options="{'no_open':True,'no_create':True,}" />
+                            <field name="evoucher_rec_date" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Log">
+                            <field name="evoucher_log" nolabel="1" readonly="1" />
+                        </page>
+                        <page string="Advanced" groups="oa_l10n_ec_edi.group_account_evoucher_manager,base.group_no_one">
+                            <!--button name="force_auth" type="object" attrs="{'invisible':['|',('evoucher_state','not in',['rejected']),('state','=','annulled')],}" string="Force Auth" icon="gtk-paste-v" confirm="Are you shure that you want to Force Authorization Number for this evoucher?" groups="oalliance_account_evoucher_sri.group_account_evoucher_manager,base.group_no_one" /-->
+                            <!--button name="force_state" type="object" string="Force Evoucher State" icon="terp-stock_effects-object-colorize" confirm="Are you shure that you want to Force state for this evoucher?" groups="oalliance_account_evoucher_sri.group_account_evoucher_manager,base.group_no_one" /-->
+                            <!--button name="print_log" type="object" string="Print Log" icon="gtk-print" groups="oalliance_account_evoucher_sri.group_account_evoucher_manager,base.group_no_one" /-->
+                            <table>
+                                <tr>
+                                    <td>
+                                        <br />
+                                 Archivo Enviado al SRI
+                                        <b>XML</b>
+                                 :
+                                        <field name="evoucher_file" nolabel="1" readonly="1" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </page>
+                    </notebook>
+                </page>
+            </xpath>
+
+
+
+            <!--xpath expr="//field[@name='emission_id']" position="after">
+                <field name="evoucher_enable" invisible="1" />
+                <field name="emission_form" invisible="1" />
+            </xpath-->
+            <!--xpath expr="//field[@name='voucher_auth_id']" position="replace">
+                <field name="voucher_auth_id" attrs="{'invisible':[('emission_form','=','evoucher')],'required':[('evoucher_enable','!=',True),],}" domain="[('voucher_id','=',voucher_id), ('partner_id','=',company_id),('auth_type','=','internal')]" context="{'auth_type':'internal','form_view_ref': 'oalliance_account_sri.accountsri_voucherauth_internal_form'}" />
+            </xpath-->
+
+            <!--xpathexpr="//button[@name='action_invoice_sent']" position="replace">
+                <button name="action_invoice_sent" type="object" string="Send by Email" attrs="{'invisible':['|',('sent','=',True), ('state', 'not in', ['open','paid'])]}" class="oe_highlight" groups="base.group_user" />
+            </xpathexpr-->
+        </field>
+    </record>
+</odoo>

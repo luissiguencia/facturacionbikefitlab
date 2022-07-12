@@ -1,0 +1,117 @@
+<odoo>
+    <record model="ir.ui.view" id="oa_evoucher_environment_tree">
+        <field name="name">oa.evoucher.environment.tree</field>
+        <field name="model">oa.evoucher.environment</field>
+        <field name="arch" type="xml">
+            <tree default_order="name">
+                <!-- field name="image_1920" widget="image" class="oe_avatar" / -->
+                <field name="name" />
+                <field name="sri_code" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="oa_evoucher_environment_form">
+        <field name="name">oa.evoucher.environment.form</field>
+        <field name="model">oa.evoucher.environment</field>
+        <field name="arch" type="xml">
+            <form default_order="name">
+                <!-- field name="image_1920" widget="image" class="oe_avatar" / -->
+                <sheet>
+                    <div class="oe_button_box" name="button_box" />
+                    <!-- widget name="web_ribbon" title="Archived" bg_color="bg-danger" / -->
+                    <h1>
+                        <field name="name" default_focus="1" placeholder="Name" />
+                    </h1>
+                    <group>
+                        <field name="sri_code" />
+                        <field name="reception_ws" />
+                    </group>
+                    <group>
+                        <field name="evoucher_general_sequence" />
+                    </group>                   
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="oa_evoucher_issuer_tree">
+        <field name="name">oa.evoucher.issuer.tree</field>
+        <field name="model">oa.evoucher.issuer</field>
+        <field name="arch" type="xml">
+            <tree default_order="name">
+                <!-- field name="image_1920" widget="image" class="oe_avatar" / -->
+                <field name="name" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="oa_evoucher_issuer_form">
+        <field name="name">oa.evoucher.issuer.form</field>
+        <field name="model">oa.evoucher.issuer</field>
+        <field name="priority" eval="200"></field>
+        <field name="arch" type="xml">
+            <form default_order="name">
+                <!-- field name="image_1920" widget="image" class="oe_avatar" / -->
+                <sheet>
+                    <div class="oe_button_box">
+
+                    </div>
+                    <widget name="web_ribbon" title="Expired" bg_color="bg-danger" attrs="{'invisible':[('state','in',['Active','Pending'])],}" />
+                    <widget name="web_ribbon" title="Active" bg_color="bg-success" attrs="{'invisible':[('state','in',['Expired','Pending'])],}" />
+                    <h1>
+                        <field name="name" placeholder="Name" />
+                    </h1>
+                    <group>
+                        <field name="state" invisible="1" />
+                    </group>
+                    <button type="object" name="add_cert" string="Add Certificate" class="oe_highlight" />
+                    <notebook>
+                        <sheet string="Certificates">
+                            <field name="certificate_ids" nolabel="1" readonly="1" />
+                        </sheet>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="oa_evoucher_issuer_certificate_tree">
+        <field name="name">oa.evoucher.issuer.certificate.tree</field>
+        <field name="model">oa.evoucher.issuer.certificate</field>
+        <field name="arch" type="xml">
+            <tree default_order="name">
+                <!-- field name="image_1920" widget="image" class="oe_avatar" / -->
+                <field name="signer" />
+                <field name="in_use" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="oa_evoucher_issuer_certificate_form">
+        <field name="name">oa.evoucher.issuer.certificate.form</field>
+        <field name="model">oa.evoucher.issuer.certificate</field>
+        <field name="priority" eval="200"></field>
+        <field name="arch" type="xml">
+            <form default_order="name" readonly="1">
+                <widget name="web_ribbon" title="Expired" bg_color="bg-danger" attrs="{'invisible':[('state','in',['Active','Pending'])],}" />
+                <widget name="web_ribbon" title="Active" bg_color="bg-success" attrs="{'invisible':[('state','in',['Expired','Pending'])],}" />
+                <h1>
+                    <field name="signer" placeholder="Name" invisible="1" />
+                </h1>
+                <group>
+                    <field name="certificate" />
+                    <field name="signer" />
+                    <field name="issuer" />
+                    <field name="not_valid_before" />
+                    <field name="not_valid_after" />
+                    <field name="state" invisible="0" />
+                </group>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

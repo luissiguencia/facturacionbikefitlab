@@ -1,0 +1,21 @@
+<odoo>
+        <record id="oa_evoucher_view_company_form" model="ir.ui.view">
+            <field name="name">oa.evoucher.view.company.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//page//notebook//page[@id='sri_basic']" position="after">
+                    <page string="Electronic Voucher">
+                        <group>
+                            <field name="evoucher_enable" />
+                            <field name="evoucher_environment"  attrs="{'required':[('evoucher_enable','!=',False)],'invisible':[('evoucher_enable','=',False)]}" />
+                            <field name="evoucher_issuer" attrs="{'required':[('evoucher_enable','!=',False)],'invisible':[('evoucher_enable','=',False)]}" />
+                            <field name="evoucher_sender_email" attrs="{'required':[('evoucher_enable','!=',False)],'invisible':[('evoucher_enable','=',False)]}" />
+                            <field name="evoucher_emission_method" attrs="{'required':[('evoucher_enable','!=',False)],'invisible':[('evoucher_enable','=',False)]}" />
+                            <field name="evoucher_send_time" attrs="{'required':[('evoucher_enable','!=',False)],'invisible':['|',('evoucher_enable','=',False),('evoucher_emission_method','=','Online')]}" widget="float_time" />
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+</odoo>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_inh" model="ir.ui.view">
+        <field name="name">res.partner.form.inh</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form//sheet//div[hasclass('o_row')]" position="after">
+                <group>
+                    <field name="property_account_position_id" required="1" colspan="4" nolabel="1"/>
+
+                </group>
+            </xpath>
+
+            <field name="street" position="attributes">
+                <attribute name="required">True</attribute>
+            </field>
+            <field name="phone" position="attributes">
+                <attribute name="required">True</attribute>
+            </field>
+            <field name="email" position="attributes">
+                <attribute name="required">True</attribute>
+            </field>
+            <field name="vat" position="attributes">
+                <attribute name="required">True</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="res_partner_kanban_view_inh" model="ir.ui.view">
+        <field name="name">res.partner.form.inh</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+        <field name="arch" type="xml">
+            <field name="display_name" position="after">
+                <field name="l10n_latam_identification_type_id" />
+                <field name="vat" />
+            </field>
+            <xpath expr="//div[hasclass('oe_kanban_details','d-flex','flex-column')]/ul" position="before">
+                <div class="oe_kanban_details d-flex flex-column">
+                    <ul>
+                        <li t-if="record.l10n_latam_identification_type_id.raw_value" class="o_text_overflow">
+                            <field name="l10n_latam_identification_type_id"/>
+                            <span>:</span>
+                        </li>
+                        <li t-if="record.vat.raw_value" class="o_text_overflow">
+                            <field name="vat"/>
+                        </li>
+                    </ul>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="account.res_partner_action_customer" model="ir.actions.act_window">
+        <field name="context">{'search_default_customer': 1,'res_partner_search_mode': 'customer', 'default_is_person': True, 'default_customer_rank': 1,'show_address': 1,'show_vat': True}</field>
+    </record>
+
+</odoo>

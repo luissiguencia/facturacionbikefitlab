@@ -1,0 +1,33 @@
+<odoo>
+    <record id="oa_evoucher_add_cert_wizard_form" model="ir.ui.view">
+        <field name="name">oa.evoucher.add.cert.wizard.form</field>
+        <field name="model">oa.evoucher.add.cert.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <!-- field name="image_1920" widget="image" class="oe_avatar" / -->
+                <div class="oe_button_box">
+                    <!-- button type="object" name="update_cert" string="Update Certificate" / -->
+                </div>
+                <widget name="web_ribbon" title="Expired" bg_color="bg-danger" attrs="{'invisible':[('state','in',['Active','Pending'])],}" />
+                <widget name="web_ribbon" title="Active" bg_color="bg-success" attrs="{'invisible':[('state','in',['Expired','Pending'])],}" />
+                <group>
+                    <field name="state" invisible="1" />
+                    <field name="certificate" required="1" />
+                    <field name="password" required="1" on_change="on_change_password()" password="True" />
+                    <field name="signer" required="1" placeholder="Name" invisible="1" />
+                    <field name="signer_aux" placeholder="Name" readonly="1" />
+                    <field name="issuer_name" required="1" placeholder="Name" invisible="1" />
+                    <field name="issuer_aux" placeholder="Name" readonly="1" />
+                    <field name="not_valid_before" required="1" placeholder="Name" invisible="1" />
+                    <field name="not_valid_before_aux" placeholder="Name" readonly="1" />
+                    <field name="not_valid_after" required="1" placeholder="Name" invisible="1" />
+                    <field name="not_valid_after_aux" placeholder="Name" readonly="1" />
+                </group>
+                <footer>
+                    <button string="Save Certificate" name="save_cert" type="object" class="oe_highlight" />
+                    <button string="Cancel" class="btn btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

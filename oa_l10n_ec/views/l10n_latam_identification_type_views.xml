@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_l10n_latam_identification_type_tree_inh" model="ir.ui.view">
+        <field name="name">view.l10n.latam.identification.type.tree.inh</field>
+        <field name="model">l10n_latam.identification.type</field>
+        <field name="inherit_id" ref="l10n_latam_base.view_l10n_latam_identification_type_tree"/>
+        <field name="arch" type="xml">
+            <field name="country_id" position="after">
+                <field name="code" />
+            </field>
+        </field>
+    </record>
+</odoo>

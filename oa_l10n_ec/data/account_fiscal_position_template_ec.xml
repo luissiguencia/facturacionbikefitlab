@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="oa_l10n_ec_pf_public" model="account.fiscal.position.template">
+        <field name="name">Entidades Y Organismos del Sector Público Y Empresas Públicas</field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+    <record id="oa_l10n_ec_pf_special" model="account.fiscal.position.template">
+        <field name="name">Contribuyentes Especiales</field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+    <record id="oa_l10n_ec_pf_soc" model="account.fiscal.position.template">
+        <field name="name">Sociedades</field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+    <record id="oa_l10n_ec_pf_nat_ob" model="account.fiscal.position.template">
+        <field name="name">Personas Naturales Obligada a Llevar Contabilidad</field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+    <record id="oa_l10n_ec_pf_nat" model="account.fiscal.position.template">
+        <field name="name">Personas Naturales No Obligada a Llevar Contabilidad Emite Factura o Nota de Venta</field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+    <record id="oa_l10n_ec_pf_public_no" model="account.fiscal.position.template">
+        <field name="name">Personas Naturales No Obligada a Llevar Contabilidad Emite Liquidación de Compras de Bienes o Adquisición de Servicios</field>
+        <field name="auto_apply"></field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+    <record id="oa_l10n_ec_pf_pro" model="account.fiscal.position.template">
+        <field name="name">Personas Naturales No Obligada a Llevar Contabilidad Profesionales</field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+    <record id="oa_l10n_ec_pf_mue" model="account.fiscal.position.template">
+        <field name="name">Personas Naturales No Obligada a Llevar Contabilidad Por Arrendamiento de Bienes Inmuebles Propios</field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+    <record id="oa_l10n_ec_pf_final" model="account.fiscal.position.template">
+        <field name="name">Consumidor Final</field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+    <record id="oa_l10n_ec_pf_ex" model="account.fiscal.position.template">
+        <field name="name">Personas Naturales/Sociedades Emite Liquidacion de Compra (Extranjeros)</field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+    <record id="oa_l10n_ec_pf_ret" model="account.fiscal.position.template">
+        <field name="name">Personas Naturales Obligada a Llevar Contabilidad Agente de Retencion</field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+    <record id="oa_l10n_ec_pf_soc_ret" model="account.fiscal.position.template">
+        <field name="name">Sociedades Agente de Retencion</field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+    <record id="oa_l10n_ec_pf_rimpe" model="account.fiscal.position.template">
+        <field name="name">RIMPE Negocios Populares</field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+    <record id="oa_l10n_ec_pf_rimpe_e" model="account.fiscal.position.template">
+        <field name="name">RIMPE Emprendedores</field>
+        <field name="chart_template_id" ref="oa_l10n_ec.oa_l10n_ec_default_chart"></field>
+    </record>
+</odoo>

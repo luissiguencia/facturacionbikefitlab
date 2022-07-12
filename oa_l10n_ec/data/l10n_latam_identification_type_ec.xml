@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="identification_type_ruc" model="l10n_latam.identification.type">
+        <field name="name">RUC</field>
+        <field name="description">Registro único de contribuyentes emitido por SRI</field>
+        <field name='sequence'>20</field>
+        <field name='country_id' ref="base.ec"></field>
+        <field name='code'>04</field>
+    </record>
+    <record id='identification_type_cedula' model='l10n_latam.identification.type'>
+        <field name='name'>Cédula</field>
+        <field name="description">Cédula de Ciudadanía emitida por el Registro Civil</field>
+        <field name='sequence'>10</field>
+        <field name='country_id' ref="base.ec"></field>
+        <field name='code'>05</field>
+        <field name='is_vat' eval='True'/>
+    </record>
+    <record id='l10n_latam_base.it_pass' model='l10n_latam.identification.type'>
+        <field name='code'>06</field>
+    </record>
+    <record id='l10n_latam_base.it_vat' model='l10n_latam.identification.type'>
+        <field name='active' eval="False"></field>
+    </record>
+    <record id='l10n_latam_base.it_fid' model='l10n_latam.identification.type'>
+        <field name='code'>08</field>
+    </record>
+    <record id='identification_type_placa' model='l10n_latam.identification.type'>
+        <field name='name'>Placa</field>
+        <field name='sequence'>100</field>
+        <field name='code'>09</field>
+        <field name='is_vat' eval='True'/>
+    </record>
+</odoo>

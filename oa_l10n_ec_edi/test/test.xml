@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>MULTICS CIA. LTDA.</razonSocial>
+    <ruc>0190345297001</ruc>
+    <claveAcceso>2901201601019034529700120011000000000010000000113</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>100</ptoEmi>
+    <secuencial>000000001</secuencial>
+    <dirMatriz>Santiago Carrasco 1-66 Rafael Torres</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>29/01/2016</fechaEmision>
+    <obligadoContabilidad>NO</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>INFOSTUDIO CIA. LTDA.</razonSocialComprador>
+    <identificacionComprador>0190353052001</identificacionComprador>
+    <totalSinImpuestos>1.00</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <baseImponible>1.00</baseImponible>
+        <tarifa>12</tarifa>
+        <valor>0.12</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>1.12</importeTotal>
+    <moneda>DOLAR</moneda>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>N/A</codigoPrincipal>
+      <descripcion>Servicio de Copiado</descripcion>
+      <cantidad>1.00</cantidad>
+      <precioUnitario>1.00</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>1.00</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>1.00</baseImponible>
+          <valor>0.12</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="campo0">Dirección: SANTIAGO CARRASCO 1-66</campoAdicional>
+    <campoAdicional nombre="campo1">Telf: 074101056</campoAdicional>
+    <campoAdicional nombre="campo2">Email: </campoAdicional>
+  </infoAdicional>
+</factura>

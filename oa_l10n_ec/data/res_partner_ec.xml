@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="oa_l10n_ec_iess" model="res.partner">
+        <field name="image_1920" type="base64" file="oa_l10n_ec/static/src/img/iess.png"/>
+        <field name="name">Instituto Ecuatorian de Seguridad Social</field>
+        <field name="state_id" ref="base.state_ec_17"/>
+        <field name="country_id" ref="base.ec"/>
+        <field name="city">Quito</field>
+        <field name="street">Av. 10 de Agosto</field>
+        <field name="street2">Quito</field>
+        <field name="phone">(02) 398-2700</field>
+
+        <field name="website">https://www.iess.gob.ec</field>
+        <field name="is_company">1</field>
+        <field name="l10n_latam_identification_type_id" ref="oa_l10n_ec.identification_type_ruc"/>
+        <field name="vat">1760004650001</field>
+    </record>
+    <record id="oa_l10n_ec_sri" model="res.partner">
+        <field name="image_1920" type="base64" file="oa_l10n_ec/static/src/img/sri.png"/>
+        <field name="name">Servicio de Rentas Internas</field>
+        <field name="state_id" ref="base.state_ec_17"/>
+        <field name="city"/>
+        <field name="country_id" ref="base.ec"/>
+        <field name="city">Quito</field>
+        <field name="street">Av. Amazonas entre Unión Nacional de Periodistas</field>
+        <field name="street2">y José Villalengua</field>
+        <field name="phone">(02) 393-6300</field>
+        <field name="website">http://www.sri.gob.ec</field>
+        <field name="is_company">1</field>
+        <field name="l10n_latam_identification_type_id" ref="oa_l10n_ec.identification_type_ruc"/>
+        <field name="vat">1760013210001</field>
+    </record>
+    <record id="oa_l10n_ec_consumidor_finalr" model="res.partner">
+        <field name="name">Consumidor final</field>
+        <field name="city">Quito</field>
+        <field name="street">Av. Amazonas entre Unión Nacional de Periodistas</field>
+        <field name="street2">y José Villalengua</field>
+        <field name="phone">(02) 393-6300</field>
+        <field name="country_id" ref="base.ec"/>
+        <field name="l10n_latam_identification_type_id" ref="oa_l10n_ec.identification_type_ruc"/>
+        <field name="vat">9999999999999</field>
+    </record>
+</odoo>
